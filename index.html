@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VẪN LÀ TMK HEHEHEHE - TÂM LÝ HỌC GIÁO DỤC</title>
+    <title>ÔN TẬP TÂM LÝ HỌC GIÁO DỤC - TMK</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -31,7 +31,7 @@
         .hidden { display: none !important; }
 
         /* Grid Menu */
-        .grid-container { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 20px; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-bottom: 20px; }
         .exam-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;
             padding: 15px; border-radius: 10px; text-align: center; cursor: pointer; border: none;
@@ -39,7 +39,6 @@
         }
         .exam-card:hover { transform: translateY(-5px); }
         .exam-card.random { background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%); }
-        .exam-card.custom { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
         
         .exam-card strong { display: block; font-size: 1.1em; margin-bottom: 5px; }
         .exam-card span { font-size: 0.8em; opacity: 0.9; }
@@ -57,7 +56,7 @@
             background: #fff; border: 1px solid #eee; padding: 15px;
             margin-bottom: 20px; border-radius: 8px;
             scroll-margin-top: 20px;
-            transition: border 0.3s box-shadow 0.3s;
+            transition: border 0.3s, box-shadow 0.3s;
         }
         .question-block.focused {
             border: 2px solid var(--primary-color);
@@ -71,7 +70,6 @@
 
         /* Tự luận Section */
         .essay-section { border-color: #ff9966; background-color: #fffaf5; }
-        .essay-section.focused { border-color: #e74c3c; box-shadow: 0 0 10px rgba(231, 76, 60, 0.2); }
         textarea.essay-input {
             width: 100%; min-height: 250px; padding: 15px;
             border: 1px solid #ccc; border-radius: 8px;
@@ -128,8 +126,8 @@
         table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
         th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }
         th { background: #f2f2f2; }
-        .history-actions { text-align: center; }
-        .btn-secondary { background: #7f8c8d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-right: 10px; }
+        .history-actions { text-align: center; display: flex; justify-content: center; gap: 15px; }
+        .btn-secondary { background: #7f8c8d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
         .btn-danger { background: #c0392b; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
         
         /* Box xem lại tự luận */
@@ -151,15 +149,15 @@
         <div class="container">
             <header>
                 <h1>TÂM LÝ HỌC GIÁO DỤC</h1>
-                <p class="subtitle">Cấu trúc: 35 câu Trắc nghiệm (7 điểm) & 1 câu Tự luận (3 điểm). Câu tự luận thì hiện mới có 4 tình huống thôi nên mong ae đóng góp ak. Tự luận thì mình viết như kiểu thi thật luôn cho mình biết là thi thì mình sẽ viết như nào nha.</p>
+                <p class="subtitle">Cấu trúc: 35 câu Trắc nghiệm (7đ) & 1 câu Tự luận (3đ) | Thời gian: 90 phút</p>
+                <p class="subtitle">By TMK và sự giúp sức của nhiều bạn để ôn TLHGD , 25-26.</p>
             </header>
 
             <div id="menu-screen">
                 <div class="section-title" style="margin-bottom: 15px; text-align: center;"><b>Danh sách đề thi</b></div>
-                <div id="exam-list" class="grid-container">
-                    </div>
+                <div id="exam-list" class="grid-container"></div>
                 <div class="footer-actions">
-                    <button class="btn-history" onclick="showHistory()">📜 Xem Lịch Sử Làm Bài</button>
+                    <button class="btn-history" onclick="showHistory()">📜 Xem Lịch Sử & Đáp Án Chi Tiết</button>
                 </div>
             </div>
 
@@ -173,9 +171,9 @@
 
                         <hr style="margin: 30px 0; border: 1px dashed #ccc;">
                         <h3 style="color: #e67e22;">PHẦN II: TỰ LUẬN TÌNH HUỐNG (3 ĐIỂM)</h3>
-                        <div class="question-block essay-section" id="q-block-essay" onclick="highlightCurrentQuestion('essay')">
+                        <div class="question-block essay-section" id="q-block-essay" onclick="scrollToEssay()">
                             <div class="question-text" id="essay-prompt">Đang tải câu hỏi tự luận...</div>
-                            <textarea id="essay-answer" class="essay-input" placeholder="Viết bài tự luận của bạn vào đây. Nhấn Enter để xuống dòng bình thường." onfocus="highlightCurrentQuestion('essay'); document.getElementById('palette-btn-essay').classList.add('active');"></textarea>
+                            <textarea id="essay-answer" class="essay-input" placeholder="Viết bài tự luận của bạn vào đây..." onfocus="scrollToEssay()"></textarea>
                         </div>
                     </div>
 
@@ -191,8 +189,9 @@
                         </div>
 
                         <div style="font-size: 0.8em; color: #666; text-align: center; margin: 15px 0; font-style: italic;">
-                            Tip: Dùng phím mũi tên ⬅️ ➡️ để chuyển câu trắc nghiệm.
+                            Tip: Dùng phím ⬅️ ➡️ để chuyển câu và ⬆️ ⬇️ để chọn đáp án.
                         </div>
+
                         <div class="sidebar-actions">
                             <button class="btn-submit-sidebar" onclick="submitQuiz()">Nộp bài ngay</button>
                             <button class="btn-exit-sidebar" onclick="goHome()">Thoát (Hủy bài)</button>
@@ -203,19 +202,18 @@
 
             <div id="result-screen" class="hidden">
                 <div class="result-card">
-                    <h2>KẾT QUẢ TRẮC NGHIỆM</h2>
+                    <h2>KẾT QUẢ BÀI LÀM</h2>
                     <div class="score-circle">
                         <span id="score-text" class="mcq-score">0/35</span>
                         <span id="points-text" class="mcq-points">(0.00/7 điểm)</span>
                     </div>
-                    <p style="color: #777; font-size: 0.9em;">Phần tự luận đang chờ chấm điểm thủ công.</p>
                     <button class="btn-primary" onclick="goHome()">Về trang chủ</button>
                 </div>
                 <hr style="border: 1px dashed #ccc; margin: 20px 0;">
-                <h3 style="color: #e67e22; text-align: center;">BÀI LÀM TỰ LUẬN CỦA BẠN</h3>
+                <h3 style="color: #e67e22; text-align: center;">PHẦN TỰ LUẬN CỦA BẠN</h3>
                 <div id="review-essay-container" style="margin-bottom: 30px;"></div>
                 
-                <h3 style="color: var(--primary-color); text-align: center;">CHI TIẾT ĐÁP ÁN TRẮC NGHIỆM</h3>
+                <h3 style="color: var(--primary-color); text-align: center;">ĐÁP ÁN CHI TIẾT TRẮC NGHIỆM</h3>
                 <div id="review-container"></div>
             </div>
 
@@ -226,8 +224,9 @@
                         <tr>
                             <th>Thời gian</th>
                             <th>Đề thi</th>
-                            <th>Trắc nghiệm (Câu)</th>
-                            <th>Điểm số (Thang 7)</th>
+                            <th>Câu đúng</th>
+                            <th>Điểm số</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tbody id="history-body"></tbody>
@@ -243,71 +242,61 @@
     <script src="script.js"></script>
 
     <script>
-        // CẤU HÌNH THÔNG SỐ MỚI
         let timerInterval;
-        const QUESTIONS_PER_EXAM = 35; // Số câu trắc nghiệm cho Tâm lý học giáo dục
-        const EXAM_DURATION_MINUTES = 90; // Thời gian làm bài 60 phút
+        const QUESTIONS_PER_EXAM = 35;
+        const EXAM_DURATION_MINUTES = 90; // Thời gian 90 phút
         let currentExamQuestions = [];
         let currentEssayQuestion = "";
         let userAnswers = {};
         let currentQuestionIndex = 0; 
 
-        // Kiểm tra dữ liệu (yêu cầu file script.js phải có mảng questions và essayQuestions)
         window.onload = function() {
             if (typeof questions === 'undefined') {
                 alert("Lỗi: Không tìm thấy mảng 'questions' trong file script.js!");
                 return;
             }
-            if (typeof essayQuestions === 'undefined') {
-                console.warn("Chưa có mảng 'essayQuestions' trong script.js. Sẽ dùng tình huống mặc định.");
-            }
 
             const examList = document.getElementById('exam-list');
-            if (!examList) return;
+            // Dùng Math.ceil để hiển thị toàn bộ câu hỏi (310 câu = 9 đề)
+            const totalExams = Math.ceil(questions.length / QUESTIONS_PER_EXAM) || 1;
 
-            // Tính số lượng đề cố định dựa trên tổng số câu hỏi chia cho 35
-            const totalExams = Math.floor(questions.length / QUESTIONS_PER_EXAM) || 1;
-
-            // Tạo các nút đề cố định
             for (let i = 1; i <= totalExams; i++) {
                 let btn = document.createElement('button');
                 btn.className = 'exam-card';
                 let startQ = (i-1)*QUESTIONS_PER_EXAM + 1;
-                let endQ = i*QUESTIONS_PER_EXAM;
+                let endQ = Math.min(i*QUESTIONS_PER_EXAM, questions.length);
                 btn.innerHTML = `<strong>Đề số ${i}</strong><span>Câu ${startQ} - ${endQ}</span>`;
                 btn.onclick = () => startFixedExam(i);
                 examList.appendChild(btn);
             }
 
-            // Đề ngẫu nhiên
             let randomBtn = document.createElement('button');
             randomBtn.className = 'exam-card random';
             randomBtn.innerHTML = `<strong>Đề Ngẫu Nhiên</strong><span>Trộn 35 câu & 1 Tự luận</span>`;
             randomBtn.onclick = () => startRandomExam();
             examList.appendChild(randomBtn);
 
-            // Đăng ký sự kiện bàn phím
+            // BẬT LẠI LẮNG NGHE BÀN PHÍM
             document.addEventListener('keydown', handleKeyboardInput);
         };
 
-        // --- XỬ LÝ BÀN PHÍM ---
+        // --- HỆ THỐNG PHÍM ĐIỀU HƯỚNG ---
         function handleKeyboardInput(e) {
+            // Không nhận phím nếu không ở màn hình quiz
             if (document.getElementById('quiz-screen').classList.contains('hidden')) return;
             
-            // Không can thiệp bàn phím nếu user đang gõ phần tự luận
-            if (document.activeElement && document.activeElement.id === 'essay-answer') {
-                return; 
-            }
+            // Không can thiệp bàn phím nếu user đang gõ tự luận
+            if (document.activeElement && document.activeElement.id === 'essay-answer') return; 
 
             if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
-                e.preventDefault();
+                e.preventDefault(); // Tránh scroll web
             }
 
             if (e.code === 'ArrowRight') {
                 if (currentQuestionIndex < currentExamQuestions.length - 1) {
                     scrollToQuestion(currentQuestionIndex + 1);
                 } else {
-                    scrollToEssay(); // Hết trắc nghiệm thì sang tự luận
+                    scrollToEssay();
                 }
             } else if (e.code === 'ArrowLeft') {
                 if (currentQuestionIndex === 'essay') {
@@ -344,70 +333,39 @@
             if (radio) radio.checked = true;
         }
 
-        // --- KHỞI TẠO BÀI THI ---
         function startFixedExam(examIndex) {
             const start = (examIndex - 1) * QUESTIONS_PER_EXAM;
             const end = start + QUESTIONS_PER_EXAM;
             currentExamQuestions = questions.slice(start, end);
-            
-            // Set câu tự luận (lấy theo thứ tự đề nếu có, không thì lấy default)
             setEssayQuestionForExam(examIndex - 1);
-
-            renderQuiz(`Đề thi số ${examIndex}`, true);
+            renderQuiz(`Đề thi số ${examIndex}`);
         }
 
         function startRandomExam() {
-            if (questions.length === 0) return;
             const shuffled = [...questions].sort(() => 0.5 - Math.random());
             currentExamQuestions = shuffled.slice(0, QUESTIONS_PER_EXAM);
-            
-            // Random câu tự luận
-            if (typeof essayQuestions !== 'undefined' && essayQuestions.length > 0) {
-                const randomEssayIndex = Math.floor(Math.random() * essayQuestions.length);
-                setEssayQuestionForExam(randomEssayIndex);
-            } else {
-                setEssayQuestionForExam(-1);
-            }
-
-            renderQuiz("Đề thi Ngẫu Nhiên", true);
+            setEssayQuestionForExam(Math.floor(Math.random() * 10));
+            renderQuiz("Đề thi Ngẫu Nhiên");
         }
 
         function setEssayQuestionForExam(index) {
             if (typeof essayQuestions !== 'undefined' && essayQuestions.length > 0) {
-                const safeIndex = (index >= 0) ? index % essayQuestions.length : 0;
-                currentEssayQuestion = essayQuestions[safeIndex];
+                currentEssayQuestion = essayQuestions[index % essayQuestions.length];
             } else {
-                currentEssayQuestion = "Đề bài:.";
+                currentEssayQuestion = "Hãy phân tích một tình huống sư phạm thực tế và áp dụng kiến thức Tâm lý học giáo dục để đề xuất hướng giải quyết.";
             }
         }
 
-        function renderQuiz(title, useTimer = true) {
+        function renderQuiz(title) {
             toggleScreen('quiz-screen');
             document.getElementById('exam-title').innerText = title;
-            
             const container = document.getElementById('question-container');
             const palette = document.getElementById('question-palette');
-            const timerBox = document.getElementById('timer-box');
-            
-            // Reset dữ liệu
-            container.innerHTML = '';
-            palette.innerHTML = '';
-            userAnswers = {};
-            currentQuestionIndex = 0; 
+            container.innerHTML = ''; palette.innerHTML = ''; userAnswers = {};
+            currentQuestionIndex = 0; // Reset vị trí
             document.getElementById('essay-answer').value = '';
             document.getElementById('essay-prompt').innerHTML = `<strong>Tình huống:</strong> ${currentEssayQuestion}`;
-            document.getElementById('palette-btn-essay').classList.remove('active', 'current-view');
-            window.scrollTo(0, 0);
 
-            clearInterval(timerInterval);
-            if (useTimer) {
-                timerBox.classList.remove('hidden');
-                startTimer(EXAM_DURATION_MINUTES * 60); 
-            } else {
-                timerBox.classList.add('hidden');
-            }
-
-            // Render câu hỏi trắc nghiệm
             currentExamQuestions.forEach((q, index) => {
                 let html = `
                     <div class="question-block" id="q-block-${index}" onclick="setCurrentQuestionManually(${index})">
@@ -431,23 +389,23 @@
                 btn.onclick = () => scrollToQuestion(index);
                 palette.appendChild(btn);
             });
-
+            
             highlightCurrentQuestion(0);
+            startTimer(EXAM_DURATION_MINUTES * 60);
         }
 
-        // --- ĐIỀU HƯỚNG VÀ FOCUS UI ---
+        // --- ĐỒNG BỘ UI & PHÍM ĐIỀU HƯỚNG ---
         function scrollToQuestion(index) {
             currentQuestionIndex = index;
             const block = document.getElementById(`q-block-${index}`);
-            block.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if(block) block.scrollIntoView({ behavior: 'smooth', block: 'center' });
             highlightCurrentQuestion(index);
         }
 
         function scrollToEssay() {
             currentQuestionIndex = 'essay';
             const block = document.getElementById(`q-block-essay`);
-            block.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            document.getElementById('essay-answer').focus();
+            if(block) block.scrollIntoView({ behavior: 'smooth', block: 'center' });
             highlightCurrentQuestion('essay');
         }
 
@@ -477,122 +435,112 @@
             userAnswers[qId] = optIndex;
             document.getElementById(`palette-btn-${uiIndex}`).classList.add('active');
             
+            // Nếu người dùng dùng chuột click chọn đáp án, tự động focus câu đó cho phím điều hướng
             if (uiIndex !== currentQuestionIndex) {
                 currentQuestionIndex = uiIndex;
                 highlightCurrentQuestion(uiIndex);
             }
         }
 
-        // --- HỆ THỐNG NỘP BÀI VÀ CHẤM ĐIỂM ---
         function startTimer(duration) {
-            let timer = duration, minutes, seconds;
-            const display = document.getElementById('time-display');
+            let timer = duration;
             clearInterval(timerInterval);
-            timerInterval = setInterval(function () {
-                minutes = parseInt(timer / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-                display.textContent = minutes + ":" + seconds;
-                if (--timer < 0) {
-                    clearInterval(timerInterval);
-                    alert("Hết giờ làm bài!");
-                    submitQuiz(true);
-                }
+            timerInterval = setInterval(() => {
+                let m = parseInt(timer / 60, 10);
+                let s = parseInt(timer % 60, 10);
+                document.getElementById('time-display').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
+                if (--timer < 0) { clearInterval(timerInterval); submitQuiz(true); }
             }, 1000);
         }
 
-        function submitQuiz(autoSubmit = false) {
-            const essayText = document.getElementById('essay-answer').value.trim();
-            if (!autoSubmit) {
-                let msg = "Bạn chắc chắn muốn nộp bài?";
-                if (Object.keys(userAnswers).length < currentExamQuestions.length) {
-                    msg = "Cảnh báo: Bạn chưa làm xong phần Trắc nghiệm. " + msg;
-                } else if (essayText === "") {
-                    msg = "Cảnh báo: Bạn đang để trống phần Tự luận. " + msg;
-                }
-                if (!confirm(msg)) return;
-            }
+        function submitQuiz(auto = false) {
+            if (!auto && !confirm("Bạn muốn nộp bài?")) return;
             clearInterval(timerInterval);
 
-            // Chấm điểm Trắc nghiệm
             let score = 0;
-            let reviewHtml = '';
+            currentExamQuestions.forEach(q => { if (userAnswers[q.id] === q.answer) score++; });
+            let pts = (score / currentExamQuestions.length) * 7;
+            const essayText = document.getElementById('essay-answer').value.trim();
 
-            currentExamQuestions.forEach((q, index) => {
-                const userAnswer = userAnswers[q.id];
-                const isCorrect = userAnswer === q.answer;
-                if (isCorrect) score++;
-                
-                let status = isCorrect ? '<span style="color:green;font-weight:bold">ĐÚNG</span>' : '<span style="color:red;text-decoration:line-through">SAI</span>';
-                let uText = userAnswer !== undefined ? q.options[userAnswer] : "Chưa chọn";
-                let cText = q.options[q.answer];
+            saveHistoryToLocal(
+                document.getElementById('exam-title').innerText, 
+                score, 
+                pts.toFixed(2), 
+                currentExamQuestions, 
+                userAnswers, 
+                essayText, 
+                currentEssayQuestion
+            );
 
-                reviewHtml += `
-                    <div class="question-block" style="background:${isCorrect ? '#e8f5e9' : '#ffebee'}">
-                        <p><strong>Câu ${index + 1}:</strong> ${q.question} - ${status}</p>
-                        <p>Bạn chọn: ${uText}</p>
-                        ${!isCorrect ? `<p>Đáp án đúng: <b>${cText}</b></p>` : ''}
-                    </div>`;
-            });
-
-            // Quy đổi thang điểm trắc nghiệm (35 câu = 7 điểm)
-            let finalPoints = (score / QUESTIONS_PER_EXAM) * 7;
-
-            // Render Kết quả
-            toggleScreen('result-screen');
-            document.getElementById('score-text').innerText = `${score}/${QUESTIONS_PER_EXAM}`;
-            document.getElementById('points-text').innerText = `(Tương đương: ${finalPoints.toFixed(2)}/7 điểm)`;
-            
-            // Render Review Tự Luận
-            let essayReviewHtml = `
-                <div class="question-block">
-                    <p><strong>Tình huống:</strong> ${currentEssayQuestion}</p>
-                    <div class="review-essay-box">${essayText !== "" ? essayText.replace(/\n/g, '<br>') : "<span style='color:red;'>Thí sinh bỏ trống phần tự luận.</span>"}</div>
-                    <p style="text-align: right; color: #e74c3c; font-weight: bold; margin-top: 10px;">Chờ giảng viên chấm: ... / 3 điểm</p>
-                </div>
-            `;
-            document.getElementById('review-essay-container').innerHTML = essayReviewHtml;
-            document.getElementById('review-container').innerHTML = reviewHtml;
-
-            // Lưu lịch sử
-            saveHistoryToLocal(document.getElementById('exam-title').innerText, score, finalPoints.toFixed(2));
-            window.scrollTo(0, 0);
+            showFullResult(score, pts.toFixed(2), currentExamQuestions, userAnswers, essayText, currentEssayQuestion);
         }
 
-        // --- CÁC HÀM TIỆN ÍCH ---
-        function toggleScreen(screenId) {
-            ['menu-screen', 'quiz-screen', 'result-screen', 'history-screen'].forEach(id => {
-                document.getElementById(id).classList.add('hidden');
-            });
-            document.getElementById(screenId).classList.remove('hidden');
-        }
-
-        function goHome() {
-            clearInterval(timerInterval);
-            toggleScreen('menu-screen');
-        }
-
-        function saveHistoryToLocal(examName, score, points) {
+        function saveHistoryToLocal(exam, score, pts, qData, uAns, essay, essayQ) {
             const history = JSON.parse(localStorage.getItem('psyEduQuizHistory')) || [];
-            history.unshift({ time: new Date().toLocaleString('vi-VN'), exam: examName, score: `${score}/${QUESTIONS_PER_EXAM}`, points: points });
+            history.unshift({ 
+                time: new Date().toLocaleString('vi-VN'), 
+                exam, 
+                score: `${score}/${qData.length}`, 
+                points: pts, 
+                qData, 
+                uAns, 
+                essay, 
+                essayQ 
+            });
             localStorage.setItem('psyEduQuizHistory', JSON.stringify(history));
+        }
+
+        function showFullResult(score, pts, qData, uAns, essay, essayQ) {
+            toggleScreen('result-screen');
+            document.getElementById('score-text').innerText = `${score}/${qData.length}`;
+            document.getElementById('points-text').innerText = `(Tương đương: ${pts}/7 điểm)`;
+            
+            document.getElementById('review-essay-container').innerHTML = `
+                <div class="question-block">
+                    <p><strong>Tình huống:</strong> ${essayQ}</p>
+                    <div class="review-essay-box">${essay !== "" ? essay.replace(/\n/g, '<br>') : "<span style='color:red;'>Trống.</span>"}</div>
+                </div>`;
+
+            document.getElementById('review-container').innerHTML = qData.map((q, i) => {
+                const isCorrect = uAns[q.id] === q.answer;
+                return `
+                    <div class="question-block" style="background:${isCorrect ? '#e8f5e9' : '#ffebee'}">
+                        <p><strong>Câu ${i + 1}:</strong> ${q.question} - ${isCorrect ? '✅ ĐÚNG' : '❌ SAI'}</p>
+                        <p>Bạn chọn: ${uAns[q.id] !== undefined ? q.options[uAns[q.id]] : 'Chưa chọn'}</p>
+                        ${!isCorrect ? `<p>Đáp án đúng: <b>${q.options[q.answer]}</b></p>` : ''}
+                    </div>`;
+            }).join('');
+            window.scrollTo(0, 0);
         }
 
         function showHistory() {
             toggleScreen('history-screen');
             const h = JSON.parse(localStorage.getItem('psyEduQuizHistory')) || [];
             const tbody = document.getElementById('history-body');
-            tbody.innerHTML = h.length ? '' : '<tr><td colspan="4">Chưa có dữ liệu</td></tr>';
-            h.forEach(i => tbody.innerHTML += `<tr><td>${i.time}</td><td>${i.exam}</td><td>${i.score}</td><td><strong>${i.points}</strong></td></tr>`);
+            tbody.innerHTML = h.map((item, idx) => `
+                <tr>
+                    <td>${item.time}</td>
+                    <td>${item.exam}</td>
+                    <td>${item.score}</td>
+                    <td><strong>${item.points}</strong></td>
+                    <td><button class="btn-primary" style="padding:5px 12px; font-size:12px;" onclick="viewDetail(${idx})">Xem lại</button></td>
+                </tr>
+            `).join('') || '<tr><td colspan="5">Chưa có dữ liệu bài làm</td></tr>';
         }
 
-        function clearHistory() {
-            if(confirm("Xóa lịch sử làm bài Tâm lý học giáo dục?")) { 
-                localStorage.removeItem('psyEduQuizHistory'); 
-                showHistory(); 
-            }
+        function viewDetail(idx) {
+            const h = JSON.parse(localStorage.getItem('psyEduQuizHistory')) || [];
+            const d = h[idx];
+            showFullResult(d.score.split('/')[0], d.points, d.qData, d.uAns, d.essay, d.essayQ);
         }
+
+        function toggleScreen(id) {
+            ['menu-screen', 'quiz-screen', 'result-screen', 'history-screen'].forEach(s => document.getElementById(s).classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function goHome() { clearInterval(timerInterval); toggleScreen('menu-screen'); }
+        function clearHistory() { if(confirm("Xóa lịch sử bài làm?")) { localStorage.removeItem('psyEduQuizHistory'); showHistory(); } }
     </script>
 </body>
 </html>
