@@ -130,8 +130,15 @@
         .btn-secondary { background: #7f8c8d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
         .btn-danger { background: #c0392b; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
         
-        /* Box xem lại tự luận */
+        /* Box xem lại tự luận & Filter */
         .review-essay-box { background: #fffaf5; border-left: 5px solid #e67e22; padding: 15px; border-radius: 4px; margin-top: 10px; white-space: pre-wrap; font-style: italic;}
+        
+        .filter-group { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+        .filter-btn { padding: 8px 20px; border: 2px solid var(--primary-color); background: white; color: var(--primary-color); font-weight: bold; cursor: pointer; border-radius: 20px; transition: 0.3s; }
+        .filter-btn.active { background: var(--primary-color); color: white; }
+        .filter-btn.active-wrong { background: #e74c3c; border-color: #e74c3c; color: white;}
+        .filter-btn.active-correct { background: #27ae60; border-color: #27ae60; color: white;}
+        .filter-btn:hover { opacity: 0.8; }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -150,7 +157,7 @@
             <header>
                 <h1>TÂM LÝ HỌC GIÁO DỤC</h1>
                 <p class="subtitle">Cấu trúc: 35 câu Trắc nghiệm (7đ) & 1 câu Tự luận (3đ) | Thời gian: 60 phút</p>
-                <p class="subtitle">By TMK và sự giúp sức của nhiều bạn để ôn TLHGD , 25-26.</p>
+                <p class="subtitle"> By TMK để ôn TLHGD 25-26</p>                
             </header>
 
             <div id="menu-screen">
@@ -214,6 +221,13 @@
                 <div id="review-essay-container" style="margin-bottom: 30px;"></div>
                 
                 <h3 style="color: var(--primary-color); text-align: center;">ĐÁP ÁN CHI TIẾT TRẮC NGHIỆM</h3>
+                
+                <div class="filter-group">
+                    <button class="filter-btn active" onclick="filterReview('all', this)">Tất cả</button>
+                    <button class="filter-btn" style="border-color: #27ae60; color: #27ae60;" onclick="filterReview('correct', this)">Chỉ xem câu ĐÚNG</button>
+                    <button class="filter-btn" style="border-color: #e74c3c; color: #e74c3c;" onclick="filterReview('wrong', this)">Chỉ xem câu SAI</button>
+                </div>
+
                 <div id="review-container"></div>
             </div>
 
@@ -244,7 +258,7 @@
     <script>
         let timerInterval;
         const QUESTIONS_PER_EXAM = 35;
-        const EXAM_DURATION_MINUTES = 60; // Thời gian 60 phút
+        const EXAM_DURATION_MINUTES = 60; // Đã đổi lại 60 phút
         let currentExamQuestions = [];
         let currentEssayQuestion = "";
         let userAnswers = {};
@@ -257,7 +271,6 @@
             }
 
             const examList = document.getElementById('exam-list');
-            // Dùng Math.ceil để hiển thị toàn bộ câu hỏi (310 câu = 9 đề)
             const totalExams = Math.ceil(questions.length / QUESTIONS_PER_EXAM) || 1;
 
             for (let i = 1; i <= totalExams; i++) {
@@ -276,20 +289,17 @@
             randomBtn.onclick = () => startRandomExam();
             examList.appendChild(randomBtn);
 
-            // BẬT LẠI LẮNG NGHE BÀN PHÍM
+            // BẬT LẮNG NGHE BÀN PHÍM
             document.addEventListener('keydown', handleKeyboardInput);
         };
 
         // --- HỆ THỐNG PHÍM ĐIỀU HƯỚNG ---
         function handleKeyboardInput(e) {
-            // Không nhận phím nếu không ở màn hình quiz
             if (document.getElementById('quiz-screen').classList.contains('hidden')) return;
-            
-            // Không can thiệp bàn phím nếu user đang gõ tự luận
             if (document.activeElement && document.activeElement.id === 'essay-answer') return; 
 
             if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
-                e.preventDefault(); // Tránh scroll web
+                e.preventDefault(); 
             }
 
             if (e.code === 'ArrowRight') {
@@ -362,7 +372,7 @@
             const container = document.getElementById('question-container');
             const palette = document.getElementById('question-palette');
             container.innerHTML = ''; palette.innerHTML = ''; userAnswers = {};
-            currentQuestionIndex = 0; // Reset vị trí
+            currentQuestionIndex = 0; 
             document.getElementById('essay-answer').value = '';
             document.getElementById('essay-prompt').innerHTML = `<strong>Tình huống:</strong> ${currentEssayQuestion}`;
 
@@ -435,7 +445,6 @@
             userAnswers[qId] = optIndex;
             document.getElementById(`palette-btn-${uiIndex}`).classList.add('active');
             
-            // Nếu người dùng dùng chuột click chọn đáp án, tự động focus câu đó cho phím điều hướng
             if (uiIndex !== currentQuestionIndex) {
                 currentQuestionIndex = uiIndex;
                 highlightCurrentQuestion(uiIndex);
@@ -453,8 +462,29 @@
             }, 1000);
         }
 
+        // TÍNH NĂNG RÀNG BUỘC PHẢI CHỌN ĐỦ ĐÁP ÁN MỚI ĐƯỢC NỘP BÀI
         function submitQuiz(auto = false) {
-            if (!auto && !confirm("Bạn muốn nộp bài?")) return;
+            // Nếu người dùng tự bấm nộp bài (không phải do hết giờ tự động nộp)
+            if (!auto) {
+                let missingIndex = -1;
+                // Kiểm tra xem có câu nào chưa chọn đáp án không
+                for (let i = 0; i < currentExamQuestions.length; i++) {
+                    if (userAnswers[currentExamQuestions[i].id] === undefined) {
+                        missingIndex = i;
+                        break;
+                    }
+                }
+
+                // Nếu phát hiện thiếu, chặn nộp và thông báo
+                if (missingIndex !== -1) {
+                    alert(`Bạn chưa hoàn thành bài thi!\nVui lòng chọn đáp án cho Câu ${missingIndex + 1}.`);
+                    scrollToQuestion(missingIndex); // Tự động cuộn trang tới đúng câu bị thiếu
+                    return;
+                }
+
+                if (!confirm("Bạn muốn nộp bài?")) return;
+            }
+
             clearInterval(timerInterval);
 
             let score = 0;
@@ -490,6 +520,36 @@
             localStorage.setItem('psyEduQuizHistory', JSON.stringify(history));
         }
 
+        // TÍNH NĂNG LỌC CÂU ĐÚNG / SAI KHI XEM LẠI
+        function filterReview(type, btnElement) {
+            // Đặt lại hiệu ứng nút active
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'active-wrong', 'active-correct');
+                btn.style.color = btn.dataset.defaultColor;
+            });
+
+            if (type === 'all') {
+                btnElement.classList.add('active');
+            } else if (type === 'wrong') {
+                btnElement.classList.add('active-wrong');
+            } else if (type === 'correct') {
+                btnElement.classList.add('active-correct');
+            }
+
+            // Ẩn hiện các câu hỏi dựa theo data-status
+            const items = document.querySelectorAll('.review-item');
+            items.forEach(item => {
+                if (type === 'all') {
+                    item.style.display = 'block';
+                } else if (type === 'correct') {
+                    item.style.display = item.getAttribute('data-status') === 'correct' ? 'block' : 'none';
+                } else if (type === 'wrong') {
+                    item.style.display = item.getAttribute('data-status') === 'wrong' ? 'block' : 'none';
+                }
+            });
+        }
+
         function showFullResult(score, pts, qData, uAns, essay, essayQ) {
             toggleScreen('result-screen');
             document.getElementById('score-text').innerText = `${score}/${qData.length}`;
@@ -501,15 +561,52 @@
                     <div class="review-essay-box">${essay !== "" ? essay.replace(/\n/g, '<br>') : "<span style='color:red;'>Trống.</span>"}</div>
                 </div>`;
 
+            // HỆ THỐNG HIỂN THỊ CHI TIẾT TẤT CẢ ĐÁP ÁN (ĐÃ TÍCH HỢP DATA-STATUS ĐỂ LỌC)
             document.getElementById('review-container').innerHTML = qData.map((q, i) => {
-                const isCorrect = uAns[q.id] === q.answer;
+                const userOpt = uAns[q.id];
+                const correctOpt = q.answer;
+                const isCorrect = userOpt === correctOpt;
+                
+                // Trạng thái dùng cho chức năng lọc (nếu nộp tự động do hết giờ mà chưa chọn cũng tính là sai)
+                const statusClass = isCorrect ? 'correct' : 'wrong';
+
+                let optionsHtml = '<div class="options-group" style="margin-top: 10px;">';
+                q.options.forEach((opt, optIndex) => {
+                    let optStyle = "padding: 8px; margin-bottom: 5px; border-radius: 5px; border: 1px solid #eee;";
+                    let icon = "";
+                    
+                    if (optIndex === correctOpt) {
+                        // Đáp án đúng được tô xanh
+                        optStyle += " background-color: #e8f5e9; color: #27ae60; border-color: #27ae60; font-weight: bold;";
+                        icon = " ✓";
+                    } else if (optIndex === userOpt) {
+                        // Đáp án sai mà user chọn bị tô đỏ (Đã bỏ gạch ngang)
+                        optStyle += " background-color: #ffebee; color: #c0392b; border-color: #c0392b;";
+                        icon = " ✗";
+                    }
+
+                    optionsHtml += `
+                        <div style="${optStyle}">
+                            ${String.fromCharCode(65 + optIndex)}. ${opt}${icon}
+                        </div>`;
+                });
+                optionsHtml += '</div>';
+
+                let unselectedWarning = userOpt === undefined ? `<p style="color: #f39c12; font-size: 0.9em; font-style: italic;">⚠️ Hệ thống tự động thu bài khi bạn chưa chọn câu này</p>` : '';
+
+                // Gắn data-status vào thẻ div
                 return `
-                    <div class="question-block" style="background:${isCorrect ? '#e8f5e9' : '#ffebee'}">
-                        <p><strong>Câu ${i + 1}:</strong> ${q.question} - ${isCorrect ? '✅ ĐÚNG' : '❌ SAI'}</p>
-                        <p>Bạn chọn: ${uAns[q.id] !== undefined ? q.options[uAns[q.id]] : 'Chưa chọn'}</p>
-                        ${!isCorrect ? `<p>Đáp án đúng: <b>${q.options[q.answer]}</b></p>` : ''}
+                    <div class="question-block review-item" data-status="${statusClass}" style="border-left: 5px solid ${isCorrect ? '#27ae60' : (userOpt === undefined ? '#f39c12' : '#c0392b')};">
+                        <p style="font-weight: 600; color: #2c3e50; margin-bottom: 5px;">Câu ${i + 1}: ${q.question}</p>
+                        ${unselectedWarning}
+                        ${optionsHtml}
                     </div>`;
             }).join('');
+            
+            // Reset lại bộ lọc về "Tất cả" khi mới hiển thị kết quả
+            const defaultFilterBtn = document.querySelector('.filter-btn[onclick*="all"]');
+            if(defaultFilterBtn) filterReview('all', defaultFilterBtn);
+
             window.scrollTo(0, 0);
         }
 
