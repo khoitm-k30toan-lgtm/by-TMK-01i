@@ -47,10 +47,8 @@
         .btn-history { background: white; border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 25px; border-radius: 30px; font-weight: bold; cursor: pointer; transition: 0.3s; }
         .btn-history:hover { background: var(--primary-color); color: white; }
 
-        /* --- BỐ CỤC 2 CỘT KHI LÀM BÀI --- */
+        /* BỐ CỤC 2 CỘT KHI LÀM BÀI */
         .quiz-wrapper { display: flex; gap: 20px; align-items: flex-start; }
-
-        /* Cột Trái: Câu hỏi */
         .quiz-main { flex: 3; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .question-block {
             background: #fff; border: 1px solid #eee; padding: 15px;
@@ -58,10 +56,7 @@
             scroll-margin-top: 20px;
             transition: border 0.3s, box-shadow 0.3s;
         }
-        .question-block.focused {
-            border: 2px solid var(--primary-color);
-            box-shadow: 0 0 10px rgba(78, 84, 200, 0.2);
-        }
+        .question-block.focused { border: 2px solid var(--primary-color); box-shadow: 0 0 10px rgba(78, 84, 200, 0.2); }
 
         .question-text { font-weight: 600; margin-bottom: 10px; color: #2c3e50; }
         .option { display: block; background: #f8f9fa; padding: 10px; margin-bottom: 5px; border-radius: 5px; cursor: pointer; transition: 0.2s; }
@@ -79,7 +74,7 @@
         }
         textarea.essay-input:focus { outline: none; border-color: var(--primary-color); }
 
-        /* Cột Phải: Sidebar cố định */
+        /* Sidebar cố định */
         .quiz-sidebar {
             flex: 1; position: sticky; top: 20px;
             background: #fdfdfd; padding: 15px; border-radius: 10px;
@@ -87,23 +82,15 @@
             max-height: 90vh; overflow-y: auto;
         }
 
-        .timer-box {
-            text-align: center; font-size: 1.4em; font-weight: bold; color: #e74c3c;
-            background: #fff0f0; padding: 8px; border-radius: 8px; margin-bottom: 15px;
-        }
-
+        .timer-box { text-align: center; font-size: 1.4em; font-weight: bold; color: #e74c3c; background: #fff0f0; padding: 8px; border-radius: 8px; margin-bottom: 15px; }
         .sidebar-label { font-weight: 600; font-size: 0.9em; margin-bottom: 10px; text-align: center; color: var(--primary-color); border-bottom: 1px dashed #ccc; padding-bottom: 5px;}
 
         /* Lưới số câu hỏi */
         .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; margin-bottom: 20px; }
-        .palette-item {
-            background: #eee; border: none; padding: 6px 0; border-radius: 4px;
-            cursor: pointer; font-size: 0.85em; text-align: center; transition: 0.2s;
-        }
+        .palette-item { background: #eee; border: none; padding: 6px 0; border-radius: 4px; cursor: pointer; font-size: 0.85em; text-align: center; transition: 0.2s; }
         .palette-item:hover { background: #dcdcdc; }
         .palette-item.active { background: #4e54c8; color: white; font-weight: bold; }
         .palette-item.current-view { border: 2px solid #e74c3c; box-sizing: border-box; }
-        
         .palette-item.essay-btn { grid-column: span 5; background: #ff9966; color: white; font-weight: bold; padding: 10px 0; }
         .palette-item.essay-btn:hover { background: #e67e22; }
 
@@ -113,11 +100,7 @@
 
         /* Kết quả & Lịch sử */
         .result-card { text-align: center; margin-bottom: 30px; }
-        .score-circle { 
-            width: 140px; height: 140px; background: var(--primary-color); color: white; 
-            border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            margin: 0 auto 15px; 
-        }
+        .score-circle { width: 140px; height: 140px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 15px; }
         .score-circle span.mcq-score { font-size: 28px; font-weight: bold; line-height: 1; }
         .score-circle span.mcq-points { font-size: 14px; opacity: 0.9; margin-top: 5px; }
 
@@ -140,7 +123,6 @@
         .filter-btn.active-correct { background: #27ae60; border-color: #27ae60; color: white;}
         .filter-btn:hover { opacity: 0.8; }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .grid-container { grid-template-columns: repeat(2, 1fr); }
             .quiz-wrapper { flex-direction: column-reverse; }
@@ -157,7 +139,7 @@
             <header>
                 <h1>TÂM LÝ HỌC GIÁO DỤC</h1>
                 <p class="subtitle">Cấu trúc: 35 câu Trắc nghiệm (7đ) & 1 câu Tự luận (3đ) | Thời gian: 60 phút</p>
-                <p class="subtitle"> By TMK để ôn TLHGD 25-26</p>                
+                <p class="subtitle">By TMK để ôn tập TLHGD 25-26 </p>
             </header>
 
             <div id="menu-screen">
@@ -258,11 +240,36 @@
     <script>
         let timerInterval;
         const QUESTIONS_PER_EXAM = 35;
-        const EXAM_DURATION_MINUTES = 60; // Đã đổi lại 60 phút
+        const EXAM_DURATION_MINUTES = 60; 
         let currentExamQuestions = [];
         let currentEssayQuestion = "";
         let userAnswers = {};
         let currentQuestionIndex = 0; 
+
+        // --- HÀM XÁO TRỘN ĐÁP ÁN MỚI THÊM ---
+        function shuffleQuestionOptions(question) {
+            // Lập bản đồ nối đáp án với trạng thái "là đáp án đúng hay không"
+            let optionsMap = question.options.map((opt, index) => {
+                return { text: opt, isCorrect: index === question.answer };
+            });
+
+            // Thuật toán Fisher-Yates để xáo trộn mảng
+            for (let i = optionsMap.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [optionsMap[i], optionsMap[j]] = [optionsMap[j], optionsMap[i]];
+            }
+
+            // Tái tạo lại mảng options và tìm vị trí mới của đáp án đúng
+            let newOptions = [];
+            let newAnswer = -1;
+            optionsMap.forEach((item, index) => {
+                newOptions.push(item.text);
+                if (item.isCorrect) newAnswer = index;
+            });
+
+            // Trả về câu hỏi với option đã trộn và answer đã được cập nhật lại vị trí
+            return { ...question, options: newOptions, answer: newAnswer };
+        }
 
         window.onload = function() {
             if (typeof questions === 'undefined') {
@@ -289,11 +296,9 @@
             randomBtn.onclick = () => startRandomExam();
             examList.appendChild(randomBtn);
 
-            // BẬT LẮNG NGHE BÀN PHÍM
             document.addEventListener('keydown', handleKeyboardInput);
         };
 
-        // --- HỆ THỐNG PHÍM ĐIỀU HƯỚNG ---
         function handleKeyboardInput(e) {
             if (document.getElementById('quiz-screen').classList.contains('hidden')) return;
             if (document.activeElement && document.activeElement.id === 'essay-answer') return; 
@@ -346,14 +351,22 @@
         function startFixedExam(examIndex) {
             const start = (examIndex - 1) * QUESTIONS_PER_EXAM;
             const end = start + QUESTIONS_PER_EXAM;
-            currentExamQuestions = questions.slice(start, end);
+            const rawQuestions = questions.slice(start, end);
+            
+            // Xáo trộn đáp án cho toàn bộ câu hỏi trong đề này
+            currentExamQuestions = rawQuestions.map(q => shuffleQuestionOptions(q));
+            
             setEssayQuestionForExam(examIndex - 1);
             renderQuiz(`Đề thi số ${examIndex}`);
         }
 
         function startRandomExam() {
             const shuffled = [...questions].sort(() => 0.5 - Math.random());
-            currentExamQuestions = shuffled.slice(0, QUESTIONS_PER_EXAM);
+            const rawQuestions = shuffled.slice(0, QUESTIONS_PER_EXAM);
+            
+            // Xáo trộn đáp án cho toàn bộ câu hỏi trong đề này
+            currentExamQuestions = rawQuestions.map(q => shuffleQuestionOptions(q));
+            
             setEssayQuestionForExam(Math.floor(Math.random() * 10));
             renderQuiz("Đề thi Ngẫu Nhiên");
         }
@@ -404,7 +417,6 @@
             startTimer(EXAM_DURATION_MINUTES * 60);
         }
 
-        // --- ĐỒNG BỘ UI & PHÍM ĐIỀU HƯỚNG ---
         function scrollToQuestion(index) {
             currentQuestionIndex = index;
             const block = document.getElementById(`q-block-${index}`);
@@ -462,26 +474,20 @@
             }, 1000);
         }
 
-        // TÍNH NĂNG RÀNG BUỘC PHẢI CHỌN ĐỦ ĐÁP ÁN MỚI ĐƯỢC NỘP BÀI
         function submitQuiz(auto = false) {
-            // Nếu người dùng tự bấm nộp bài (không phải do hết giờ tự động nộp)
             if (!auto) {
                 let missingIndex = -1;
-                // Kiểm tra xem có câu nào chưa chọn đáp án không
                 for (let i = 0; i < currentExamQuestions.length; i++) {
                     if (userAnswers[currentExamQuestions[i].id] === undefined) {
                         missingIndex = i;
                         break;
                     }
                 }
-
-                // Nếu phát hiện thiếu, chặn nộp và thông báo
                 if (missingIndex !== -1) {
                     alert(`Bạn chưa hoàn thành bài thi!\nVui lòng chọn đáp án cho Câu ${missingIndex + 1}.`);
-                    scrollToQuestion(missingIndex); // Tự động cuộn trang tới đúng câu bị thiếu
+                    scrollToQuestion(missingIndex); 
                     return;
                 }
-
                 if (!confirm("Bạn muốn nộp bài?")) return;
             }
 
@@ -520,33 +526,22 @@
             localStorage.setItem('psyEduQuizHistory', JSON.stringify(history));
         }
 
-        // TÍNH NĂNG LỌC CÂU ĐÚNG / SAI KHI XEM LẠI
         function filterReview(type, btnElement) {
-            // Đặt lại hiệu ứng nút active
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
                 btn.classList.remove('active', 'active-wrong', 'active-correct');
                 btn.style.color = btn.dataset.defaultColor;
             });
 
-            if (type === 'all') {
-                btnElement.classList.add('active');
-            } else if (type === 'wrong') {
-                btnElement.classList.add('active-wrong');
-            } else if (type === 'correct') {
-                btnElement.classList.add('active-correct');
-            }
+            if (type === 'all') btnElement.classList.add('active');
+            else if (type === 'wrong') btnElement.classList.add('active-wrong');
+            else if (type === 'correct') btnElement.classList.add('active-correct');
 
-            // Ẩn hiện các câu hỏi dựa theo data-status
             const items = document.querySelectorAll('.review-item');
             items.forEach(item => {
-                if (type === 'all') {
-                    item.style.display = 'block';
-                } else if (type === 'correct') {
-                    item.style.display = item.getAttribute('data-status') === 'correct' ? 'block' : 'none';
-                } else if (type === 'wrong') {
-                    item.style.display = item.getAttribute('data-status') === 'wrong' ? 'block' : 'none';
-                }
+                if (type === 'all') item.style.display = 'block';
+                else if (type === 'correct') item.style.display = item.getAttribute('data-status') === 'correct' ? 'block' : 'none';
+                else if (type === 'wrong') item.style.display = item.getAttribute('data-status') === 'wrong' ? 'block' : 'none';
             });
         }
 
@@ -561,13 +556,10 @@
                     <div class="review-essay-box">${essay !== "" ? essay.replace(/\n/g, '<br>') : "<span style='color:red;'>Trống.</span>"}</div>
                 </div>`;
 
-            // HỆ THỐNG HIỂN THỊ CHI TIẾT TẤT CẢ ĐÁP ÁN (ĐÃ TÍCH HỢP DATA-STATUS ĐỂ LỌC)
             document.getElementById('review-container').innerHTML = qData.map((q, i) => {
                 const userOpt = uAns[q.id];
                 const correctOpt = q.answer;
                 const isCorrect = userOpt === correctOpt;
-                
-                // Trạng thái dùng cho chức năng lọc (nếu nộp tự động do hết giờ mà chưa chọn cũng tính là sai)
                 const statusClass = isCorrect ? 'correct' : 'wrong';
 
                 let optionsHtml = '<div class="options-group" style="margin-top: 10px;">';
@@ -576,11 +568,9 @@
                     let icon = "";
                     
                     if (optIndex === correctOpt) {
-                        // Đáp án đúng được tô xanh
                         optStyle += " background-color: #e8f5e9; color: #27ae60; border-color: #27ae60; font-weight: bold;";
                         icon = " ✓";
                     } else if (optIndex === userOpt) {
-                        // Đáp án sai mà user chọn bị tô đỏ (Đã bỏ gạch ngang)
                         optStyle += " background-color: #ffebee; color: #c0392b; border-color: #c0392b;";
                         icon = " ✗";
                     }
@@ -594,7 +584,6 @@
 
                 let unselectedWarning = userOpt === undefined ? `<p style="color: #f39c12; font-size: 0.9em; font-style: italic;">⚠️ Hệ thống tự động thu bài khi bạn chưa chọn câu này</p>` : '';
 
-                // Gắn data-status vào thẻ div
                 return `
                     <div class="question-block review-item" data-status="${statusClass}" style="border-left: 5px solid ${isCorrect ? '#27ae60' : (userOpt === undefined ? '#f39c12' : '#c0392b')};">
                         <p style="font-weight: 600; color: #2c3e50; margin-bottom: 5px;">Câu ${i + 1}: ${q.question}</p>
@@ -603,7 +592,6 @@
                     </div>`;
             }).join('');
             
-            // Reset lại bộ lọc về "Tất cả" khi mới hiển thị kết quả
             const defaultFilterBtn = document.querySelector('.filter-btn[onclick*="all"]');
             if(defaultFilterBtn) filterReview('all', defaultFilterBtn);
 
