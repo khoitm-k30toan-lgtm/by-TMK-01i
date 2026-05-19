@@ -3411,7 +3411,7 @@ const questions = [
     },
     {
         id: 311,
-        question: "Câu 1. Tâm lí học giáo dục nghiên cứu:",
+        question: "Tâm lí học giáo dục nghiên cứu:",
         options: [
             "Bản chất của hoạt động  dạy học.",
             "Những vấn đề liên quan đến việc hình thành các phẩm chất nhân cách, hình thành định hướng giá trị đạo đức, hành vi ứng xử của học sinh.",
@@ -3422,7 +3422,7 @@ const questions = [
     },
     {
         id: 312,
-        question: "Câu 2. Phương pháp nghiên cứu nào sau đây cho phép thu thập ý kiến chủ quan của số đông khách thể, trên diện rộng, thời gian ngắn?",
+        question: " Phương pháp nghiên cứu nào sau đây cho phép thu thập ý kiến chủ quan của số đông khách thể, trên diện rộng, thời gian ngắn?",
         options: [
             "Phương pháp quan sát.",
             "Phương pháp nghiên cứu thực nghiệm.",
@@ -3433,7 +3433,7 @@ const questions = [
     },
     {
         id: 313,
-        question: "Câu 3.   Khi muốn theo dõi hành vi của cá nhân cần sử dụng  phương pháp nào sau đây?",
+        question: "   Khi muốn theo dõi hành vi của cá nhân cần sử dụng  phương pháp nào sau đây?",
         options: [
             "Phỏng vấn.",
             "Quan sát",
@@ -3444,7 +3444,7 @@ const questions = [
     },
     {
         id: 314,
-        question: "Câu 4. Tâm lí học giáo dục vận dụng tìm hiểu các hoạt động nhận thức của con người để tổ chức các hoạt động dạy học, giáo dục, hỗ trợ tâm lí học đường… Cho thấy tâm lí học giáo dục có mối liên quan với:",
+        question: " Tâm lí học giáo dục vận dụng tìm hiểu các hoạt động nhận thức của con người để tổ chức các hoạt động dạy học, giáo dục, hỗ trợ tâm lí học đường… Cho thấy tâm lí học giáo dục có mối liên quan với:",
         options: [
             "Tâm lí học khác biệt.",
             "Tâm lí học xã hội .",
@@ -3455,7 +3455,7 @@ const questions = [
     },
     {
         id: 315,
-        question: "Câu 5.   Trong hoạt động dạy học, giáo dục hay hỗ trợ tâm lí trong trường học đảm bảo phù hợp với đặc điểm tâm lí lứa tuổi. Cho thấy tâm lí học giáo dục có mối liên quan với:",
+        question: "   Trong hoạt động dạy học, giáo dục hay hỗ trợ tâm lí trong trường học đảm bảo phù hợp với đặc điểm tâm lí lứa tuổi. Cho thấy tâm lí học giáo dục có mối liên quan với:",
         options: [
             "Tâm lí học khác biệt.",
             "Tâm lí học xã hội .",
@@ -3466,7 +3466,7 @@ const questions = [
     },
     {
         id: 316,
-        question: "Câu 6. Tâm lí học giáo dục nghiên cứu những vấn đề nào liên quan đến người học?",
+        question: " Tâm lí học giáo dục nghiên cứu những vấn đề nào liên quan đến người học?",
         options: [
             "A. Chỉ các hoạt động học tập trên lớp.",
             "B. Quá trình dạy học và các yếu tố kỹ thuật giảng dạy.",
@@ -3477,7 +3477,7 @@ const questions = [
     },
     {
         id: 317,
-        question: "Câu 7. Nội dung nào dưới đây phản ánh đúng nhiệm vụ của Tâm lí học giáo dục?",
+        question: " Nội dung nào dưới đây phản ánh đúng nhiệm vụ của Tâm lí học giáo dục?",
         options: [
             "A. Phân tích quá trình dạy học từ góc độ triết học.",
             "B. Xác định phương pháp giảng dạy tích cực trong từng cấp học.",
@@ -3488,51 +3488,51 @@ const questions = [
     },
     {
         id: 318,
-        question: "Câu 8. Đối tượng nghiên cứu của Tâm lí học giáo dục không bao gồm yếu tố nào sau đây?",
+        question: "Đối tượng nghiên cứu của Tâm lí học giáo dục không bao gồm yếu tố nào sau đây?",
         options: [
-            "A. Sự phát triển tâm lí và điều kiện phát triển tâm lí của người học.",
-            "B. Tác động của môi trường giáo dục đến sự phát triển tâm lí người học.",
-            "C. Các chương trình giảng dạy và nội dung học tập theo cấp học.",
-            "D. Những khó khăn tâm lí cá nhân trong quá trình học tập."
+            " Sự phát triển tâm lí và điều kiện phát triển tâm lí của người học.",
+            " Tác động của môi trường giáo dục đến sự phát triển tâm lí người học.",
+            " Các chương trình giảng dạy và nội dung học tập theo cấp học.",
+            " Những khó khăn tâm lí cá nhân trong quá trình học tập."
         ],
         answer: 2 // 8C
     },
     {
         id: 319,
-        question: "Câu 9. Trong Tâm lí học giáo dục hiện đại, ba khuynh hướng nghiên cứu cơ bản là:",
+        question: " Trong Tâm lí học giáo dục hiện đại, ba khuynh hướng nghiên cứu cơ bản là:",
         options: [
-            "A. Nghiên cứu mô tả, nghiên cứu tương quan, nghiên cứu thực nghiệm.",
-            "B. Nghiên cứu so sánh, nghiên cứu lý thuyết, nghiên cứu định tính.",
-            "C. Nghiên cứu tình huống, nghiên cứu định lượng, nghiên cứu dự báo.",
-            "D. Nghiên cứu tổng kết, nghiên cứu thử nghiệm, nghiên cứu thống kê."
+            " Nghiên cứu mô tả, nghiên cứu tương quan, nghiên cứu thực nghiệm.",
+            " Nghiên cứu so sánh, nghiên cứu lý thuyết, nghiên cứu định tính.",
+            " Nghiên cứu tình huống, nghiên cứu định lượng, nghiên cứu dự báo.",
+            " Nghiên cứu tổng kết, nghiên cứu thử nghiệm, nghiên cứu thống kê."
         ],
         answer: 0 // 9A
     },
     {
         id: 320,
-        question: "Câu 10. Yếu tố nào dưới đây có thể ảnh hưởng đến độ chính xác của thông tin khi sử dụng phương pháp điều tra bằng phiếu hỏi?",
+        question: " Yếu tố nào dưới đây có thể ảnh hưởng đến độ chính xác của thông tin khi sử dụng phương pháp điều tra bằng phiếu hỏi?",
         options: [
-            "A. Độ dài của câu hỏi trong phiếu hỏi.",
-            "B. Các yếu tố gây nhiễu và môi trường trả lời phiếu hỏi không đảm bảo khách quan.",
-            "C. Số lượng câu hỏi trong phiếu hỏi.",
-            "D. Phân loại câu hỏi trong phiếu hỏi (câu hỏi đóng hay mở)."
+            " Độ dài của câu hỏi trong phiếu hỏi.",
+            " Các yếu tố gây nhiễu và môi trường trả lời phiếu hỏi không đảm bảo khách quan.",
+            " Số lượng câu hỏi trong phiếu hỏi.",
+            " Phân loại câu hỏi trong phiếu hỏi (câu hỏi đóng hay mở)."
         ],
         answer: 1 // 10B
     },
     {
         id: 321,
-        question: "Câu 11. Quy luật toàn vẹn trong sự phát triển tâm lý của con người chỉ ra rằng:",
+        question: " Quy luật toàn vẹn trong sự phát triển tâm lý của con người chỉ ra rằng:",
         options: [
-            "A. Tâm lí con người càng phát triển thì càng trở nên phức tạp và rời rạc.",
-            "B. Tâm lí con người càng phát triển thì ngày càng trở nên trọn vẹn, thống nhất và bền vững hơn.",
-            "C. Tâm lí con người luôn duy trì sự thiếu hệ thống trong suốt cuộc đời.",
-            "D. Tâm lí của con người ngày càng trở nên mâu thuẫn và không thống nhất."
+            " Tâm lí con người càng phát triển thì càng trở nên phức tạp và rời rạc.",
+            " Tâm lí con người càng phát triển thì ngày càng trở nên trọn vẹn, thống nhất và bền vững hơn.",
+            " Tâm lí con người luôn duy trì sự thiếu hệ thống trong suốt cuộc đời.",
+            " Tâm lí của con người ngày càng trở nên mâu thuẫn và không thống nhất."
         ],
         answer: 1 // 11B
     },
     {
         id: 322,
-        question: "Câu 12 .  Quy luật chung của sự phát triển tâm lí được thể hiện bởi:",
+        question: "  Quy luật chung của sự phát triển tâm lí được thể hiện bởi:",
         options: [
             "Tính không đều của sự phát triển tâm lí.",
             "Tính toàn vẹn của tâm lí.",
@@ -3543,29 +3543,29 @@ const questions = [
     },
     {
         id: 323,
-        question: "Câu 13 .  Nguyên nhân cơ bản của sự phát triển tâm lí ở trẻ là:",
+        question: "  Nguyên nhân cơ bản của sự phát triển tâm lí ở trẻ là:",
         options: [
-            "A. Hoàn cảnh sống và quan hệ của chính đứa trẻ.",
-            "B. Môi trường sống của trẻ.",
-            "C. Hoàn cảnh xã hội khi đứa trẻ ra đời.",
-            "D. Hoàn cảnh kinh tế của gia đình đứa trẻ."
+            " Hoàn cảnh sống và quan hệ của chính đứa trẻ.",
+            " Môi trường sống của trẻ.",
+            " Hoàn cảnh xã hội khi đứa trẻ ra đời.",
+            " Hoàn cảnh kinh tế của gia đình đứa trẻ."
         ],
         answer: 0 // 13A
     },
     {
         id: 324,
-        question: "Câu 14. Sự phát triển “nhảy vọt” ở tuổi thiếu niên có sự thay đổi nào sau đây?",
+        question: " Sự phát triển “nhảy vọt” ở tuổi thiếu niên có sự thay đổi nào sau đây?",
         options: [
-            "A. Thay đổi về thể chất, trưởng thành về mặt sinh dục và vị thế trong gia đình, nhà trường, xã hội.",
-            "B. Thay đổi về môi trường sống và quan điểm chính trị.",
-            "C. Thay đổi về nhận thức nhưng không có sự thay đổi về thể chất.",
-            "D. Thay đổi về tình cảm mà không có sự phát triển về mặt nhận thức."
+            " Thay đổi về thể chất, trưởng thành về mặt sinh dục và vị thế trong gia đình, nhà trường, xã hội.",
+            " Thay đổi về môi trường sống và quan điểm chính trị.",
+            " Thay đổi về nhận thức nhưng không có sự thay đổi về thể chất.",
+            " Thay đổi về tình cảm mà không có sự phát triển về mặt nhận thức."
         ],
         answer: 0 // 14A
     },
     {
         id: 325,
-        question: "Câu 15.  Ở tuổi thiếu niên các em khó làm chủ cảm xúc, dễ bị kích động, hay vi phạm kỉ luật, thường có hành vi bốc đồng dễ dẫn đến bạo lực học đường là do:",
+        question: "  Ở tuổi thiếu niên các em khó làm chủ cảm xúc, dễ bị kích động, hay vi phạm kỉ luật, thường có hành vi bốc đồng dễ dẫn đến bạo lực học đường là do:",
         options: [
             "Sự phát triển không cân đối của hệ xương.",
             "Hoạt động hệ thần kinh chưa cân bằng, hưng phấn mạnh.",
@@ -3576,7 +3576,7 @@ const questions = [
     },
     {
         id: 326,
-        question: "Câu 16. Nguyên nhân chủ yếu khiến thiếu niên thường dễ bị kích động, có cảm xúc mạnh, dễ bực tức, nổi khùng, phản ứng mạnh mẽ với các tác động bên ngoài là do:",
+        question: " Nguyên nhân chủ yếu khiến thiếu niên thường dễ bị kích động, có cảm xúc mạnh, dễ bực tức, nổi khùng, phản ứng mạnh mẽ với các tác động bên ngoài là do:",
         options: [
             "Sự phát triển hệ xương mạnh hơn hệ cơ.",
             "Tuyến nội tiết hoạt động mạnh, ảnh hưởng tới hệ thần kinh.",
@@ -3587,29 +3587,29 @@ const questions = [
     },
     {
         id: 327,
-        question: "Câu 17. Điểm nào không đúng với việc mở rộng vai trò người lớn của tuổi đầu thanh niên?",
+        question: " Điểm nào không đúng với việc mở rộng vai trò người lớn của tuổi đầu thanh niên?",
         options: [
-            "A. Trong gia đình, các em có nhiều quyền lợi và trách nhiệm của người lớn hơn.",
-            "B. Ngoài xã hội, các em đã có quyền công dân.",
-            "C. Trong nhà trường và ngoài xã hội, thái độ của người lớn thể hiện tính chất hai mặt đối với các em tuổi đầu thanh niên: vừa đòi hỏi ở các em tính độc lập, ý thức trách nhiệm, vừa đòi hỏi các em phải thích ứng với yêu cầu của người lớn",
-            "D. Cơ thể các em đã trưởng thành, cân đối và khoẻ mạnh có thể làm được nhiều việc của người lớn."
+            " Trong gia đình, các em có nhiều quyền lợi và trách nhiệm của người lớn hơn.",
+            " Ngoài xã hội, các em đã có quyền công dân.",
+            " Trong nhà trường và ngoài xã hội, thái độ của người lớn thể hiện tính chất hai mặt đối với các em tuổi đầu thanh niên: vừa đòi hỏi ở các em tính độc lập, ý thức trách nhiệm, vừa đòi hỏi các em phải thích ứng với yêu cầu của người lớn",
+            " Cơ thể các em đã trưởng thành, cân đối và khoẻ mạnh có thể làm được nhiều việc của người lớn."
         ],
         answer: 3 // 17D
     },
     {
         id: 328,
-        question: "Câu 18. Đặc điểm nào sau đây đúng về đời sống tình cảm của tuổi đầu thanh niên?",
+        question: " Đặc điểm nào sau đây đúng về đời sống tình cảm của tuổi đầu thanh niên?",
         options: [
-            "A. Mang tính ổn định, ít thay đổi, không có nhu cầu yêu đương.",
-            "B. Mang tính đa dạng, ổn định và xuất hiện nhu cầu yêu đương.",
-            "C. Tình cảm luôn rối ren, không ổn định và thiếu mối quan hệ rõ ràng.",
-            "D. Tình cảm không có sự phát triển rõ ràng trong giai đoạn này."
+            " Mang tính ổn định, ít thay đổi, không có nhu cầu yêu đương.",
+            " Mang tính đa dạng, ổn định và xuất hiện nhu cầu yêu đương.",
+            " Tình cảm luôn rối ren, không ổn định và thiếu mối quan hệ rõ ràng.",
+            " Tình cảm không có sự phát triển rõ ràng trong giai đoạn này."
         ],
         answer: 1 // 18B
     },
     {
         id: 329,
-        question: "Câu 19. Điều nào không đúng với sự phát triển thể chất của lứa tuổi đầu thanh niên?",
+        question: " Điều nào không đúng với sự phát triển thể chất của lứa tuổi đầu thanh niên?",
         options: [
             "Đa số các em đang trong thời kì phát dục .",
             "Đa số cơ thể phát triển cân đối, khỏe, đẹp như cơ thể người lớn.",
@@ -3620,144 +3620,144 @@ const questions = [
     },
     {
         id: 330,
-        question: "Câu 20.Thanh niên chưa xác định được lý tưởng sống của bản thân có thể gặp khó khăn gì?",
+        question: "Thanh niên chưa xác định được lý tưởng sống của bản thân có thể gặp khó khăn gì?",
         options: [
-            "A. Họ có thể gặp khó khăn trong việc đạt được mục tiêu và định hướng tương lai.",
-            "B. Họ sẽ tự động tìm thấy lý tưởng sống mà không cần sự hỗ trợ.",
-            "C. Họ sẽ không gặp phải bất kỳ vấn đề gì trong việc phát triển bản thân.",
-            "D. Họ sẽ dễ dàng lựa chọn nghề nghiệp và vai trò trong xã hội."
+            " Họ có thể gặp khó khăn trong việc đạt được mục tiêu và định hướng tương lai.",
+            " Họ sẽ tự động tìm thấy lý tưởng sống mà không cần sự hỗ trợ.",
+            " Họ sẽ không gặp phải bất kỳ vấn đề gì trong việc phát triển bản thân.",
+            " Họ sẽ dễ dàng lựa chọn nghề nghiệp và vai trò trong xã hội."
         ],
         answer: 0 // 20A
     },
     {
         id: 331,
-        question: "Câu 21. Tiến hành hoạt động dạy, người thầy có nhiệm vụ:",
+        question: " Tiến hành hoạt động dạy, người thầy có nhiệm vụ:",
         options: [
-            "A. Sáng tạo ra tri thức mới.",
-            "B. Tổ chức, điều khiển quá trình tái tạo lại tri thức, nền văn hoá xã hội ở học sinh.",
-            "C. Tái tạo lại tri thức, nền văn hoá xã hội cho bản thân.",
-            "D. Cả a, b và c"
+            " Sáng tạo ra tri thức mới.",
+            " Tổ chức, điều khiển quá trình tái tạo lại tri thức, nền văn hoá xã hội ở học sinh.",
+            " Tái tạo lại tri thức, nền văn hoá xã hội cho bản thân.",
+            " Cả a, b và c"
         ],
         answer: 1 // 21B
     },
     {
         id: 332,
-        question: "Câu 22. Quá trình hình thành khái niệm cho học sinh trong dạy học là quá trình:",
+        question: " Quá trình hình thành khái niệm cho học sinh trong dạy học là quá trình:",
         options: [
-            "A. Giáo viên tổ chức, điều khiển hoạt động học của học sinh nhằm giúp các em tái tạo lại những năng lực thực tiễn của loài người được gửi gắm trong thế giới đối tượng cho bản thân.",
-            "B. Giáo viên mô tả, giảng giải để học sinh nắm được định nghĩa, khái niệm.",
-            "C. Chuyển hoá khái niệm từ đầu giáo viên sang đầu học sinh.",
-            "D. Giáo viên hệ thống hoá những kinh nghiệm vốn có trong bản thân học sinh để hình thành ở các em những khái niệm khoa học."
+            " Giáo viên tổ chức, điều khiển hoạt động học của học sinh nhằm giúp các em tái tạo lại những năng lực thực tiễn của loài người được gửi gắm trong thế giới đối tượng cho bản thân.",
+            " Giáo viên mô tả, giảng giải để học sinh nắm được định nghĩa, khái niệm.",
+            " Chuyển hoá khái niệm từ đầu giáo viên sang đầu học sinh.",
+            " Giáo viên hệ thống hoá những kinh nghiệm vốn có trong bản thân học sinh để hình thành ở các em những khái niệm khoa học."
         ],
         answer: 0 // 22A
     },
     {
         id: 333,
-        question: "Câu 23. Động cơ hoàn thiện tri thức là do:",
+        question: " Động cơ hoàn thiện tri thức là do:",
         options: [
-            "A. Sự hấp dẫn, lôi cuốn bởi tri thức và phương pháp giành lấy tri thức đó của học sinh.",
-            "B. Nhu cầu học và nhu cầu nhận thức của học sinh.",
-            "C. Nguyện vọng hoàn thiện tri thức của học sinh.",
-            "D. Cả a, b và c."
+            " Sự hấp dẫn, lôi cuốn bởi tri thức và phương pháp giành lấy tri thức đó của học sinh.",
+            " Nhu cầu học và nhu cầu nhận thức của học sinh.",
+            " Nguyện vọng hoàn thiện tri thức của học sinh.",
+            " Cả a, b và c."
         ],
         answer: 3 // 23D
     },
     {
         id: 334,
-        question: "Câu 24. Nếu hoạt động học tập của học sinh được thúc đẩy bởi động cơ quan hệ xã hội thì:",
+        question: " Nếu hoạt động học tập của học sinh được thúc đẩy bởi động cơ quan hệ xã hội thì:",
         options: [
-            "A. Học sinh thường không say sưa học tập.",
-            "B.  Học sinh vẫn say sưa học tập do sự hấp dẫn của tri thức.",
-            "C. Học sinh vẫn say sưa học tập, nhưng sự say sưa đó thường do sự hấp dẫn lôi cuốn của một “cái khác” nằm ngoài mục đích trực tiếp của việc học.",
-            "D. Học sinh say sưa học vì bị hấp dẫn bởi tiến trình và kết quả học tập."
+            " Học sinh thường không say sưa học tập.",
+            "  Học sinh vẫn say sưa học tập do sự hấp dẫn của tri thức.",
+            " Học sinh vẫn say sưa học tập, nhưng sự say sưa đó thường do sự hấp dẫn lôi cuốn của một “cái khác” nằm ngoài mục đích trực tiếp của việc học.",
+            " Học sinh say sưa học vì bị hấp dẫn bởi tiến trình và kết quả học tập."
         ],
         answer: 2 // 24C
     },
     {
         id: 335,
-        question: "Câu 25. Để hình thành động cơ học tập vững bền, giáo viên cần làm gì trong mỗi tiết học?",
+        question: " Để hình thành động cơ học tập vững bền, giáo viên cần làm gì trong mỗi tiết học?",
         options: [
-            "A. Giảng dạy lý thuyết cho học sinh.",
-            "B. Thiết kế bài giảng hấp dẫn, đưa ra ví dụ thực tiễn và bài tập củng cố.",
-            "C. Cho học sinh tham gia vào những hoạt động có tính chất vui chơi, giải trí.",
-            "D. Để học sinh tự học mà không cần hướng dẫn của giáo viên."
+            " Giảng dạy lý thuyết cho học sinh.",
+            " Thiết kế bài giảng hấp dẫn, đưa ra ví dụ thực tiễn và bài tập củng cố.",
+            " Cho học sinh tham gia vào những hoạt động có tính chất vui chơi, giải trí.",
+            " Để học sinh tự học mà không cần hướng dẫn của giáo viên."
         ],
         answer: 1 // 25B
     },
     {
         id: 336,
-        question: "Câu 26. Khi giáo viên áp dụng các phương pháp dạy học tích cực, học sinh sẽ được trang bị gì?",
+        question: " Khi giáo viên áp dụng các phương pháp dạy học tích cực, học sinh sẽ được trang bị gì?",
         options: [
-            "A. Kỹ năng sống và kỹ năng xã hội.",
-            "B. Cách học hiệu quả và khả năng tự học, làm việc sáng tạo.",
-            "C. Kỹ năng thực hành và khả năng ghi nhớ.",
-            "D. Kỹ năng tư duy phản biện mà không cần tự học."
+            " Kỹ năng sống và kỹ năng xã hội.",
+            " Cách học hiệu quả và khả năng tự học, làm việc sáng tạo.",
+            " Kỹ năng thực hành và khả năng ghi nhớ.",
+            " Kỹ năng tư duy phản biện mà không cần tự học."
         ],
         answer: 1 // 26B
     },
     {
         id: 337,
-        question: "Câu 27.  Chỉ sau 2 lần giải bài tập cùng loại, học sinh đã nắm được giải tổng quát của bài tập đó. Điều này chứng tỏ sự phát triển cao của chỉ số trí tuệ nào?",
+        question: "  Chỉ sau 2 lần giải bài tập cùng loại, học sinh đã nắm được giải tổng quát của bài tập đó. Điều này chứng tỏ sự phát triển cao của chỉ số trí tuệ nào?",
         options: [
-            "A. Tốc độ khái quát hóa.",
-            "B. Tốc độ định hướng của trí tuệ.",
-            "C. Tính tiết kiệm của tư duy.",
-            "D. Tính mềm dẻo của trí tuệ"
+            " Tốc độ khái quát hóa.",
+            " Tốc độ định hướng của trí tuệ.",
+            " Tính tiết kiệm của tư duy.",
+            " Tính mềm dẻo của trí tuệ"
         ],
         answer: 0 // 27A
     },
     {
         id: 338,
-        question: "Câu 28. Cả hai nhóm động cơ hoàn thiện tri thức và động cơ quan hệ xã hội tồn tại song song, nhưng thường được sắp xếp thành một hệ thống theo thứ bậc. Điều này có nghĩa là gì?",
+        question: " Cả hai nhóm động cơ hoàn thiện tri thức và động cơ quan hệ xã hội tồn tại song song, nhưng thường được sắp xếp thành một hệ thống theo thứ bậc. Điều này có nghĩa là gì?",
         options: [
-            "A. Động cơ hoàn thiện tri thức luôn chiếm ưu thế tuyệt đối trong tất cả học sinh.",
-            "B. Tùy vào điều kiện dạy học và yếu tố gia đình, đặc điểm tâm lý học sinh mỗi loại động cơ có ảnh hưởng khác nhau.",
-            "C. Động cơ quan hệ xã hội luôn mạnh mẽ hơn động cơ hoàn thiện tri thức.",
-            "D. Các động cơ hoàn thiện tri thức và quan hệ xã hội không có sự tương tác nào với nhau."
+            " Động cơ hoàn thiện tri thức luôn chiếm ưu thế tuyệt đối trong tất cả học sinh.",
+            " Tùy vào điều kiện dạy học và yếu tố gia đình, đặc điểm tâm lý học sinh mỗi loại động cơ có ảnh hưởng khác nhau.",
+            " Động cơ quan hệ xã hội luôn mạnh mẽ hơn động cơ hoàn thiện tri thức.",
+            " Các động cơ hoàn thiện tri thức và quan hệ xã hội không có sự tương tác nào với nhau."
         ],
         answer: 1 // 28B
     },
     {
         id: 339,
-        question: "Câu 29. Khi hình thành khái niệm, điều quan trọng nhất mà giáo viên cần chú ý là:",
+        question: " Khi hình thành khái niệm, điều quan trọng nhất mà giáo viên cần chú ý là:",
         options: [
-            "A. Sử dụng nhiều ví dụ khác nhau để học sinh so sánh.",
-            "B. Giới thiệu nhiều đối tượng nhưng không cần phân tích các thuộc tính.",
-            "C. Đảm bảo tính đầy đủ và mềm dẻo của khái niệm, giúp học sinh vận dụng khái niệm đúng đắn.",
-            "D. Chỉ tập trung vào việc ghi nhớ khái niệm mà không cần phân tích sâu."
+            " Sử dụng nhiều ví dụ khác nhau để học sinh so sánh.",
+            " Giới thiệu nhiều đối tượng nhưng không cần phân tích các thuộc tính.",
+            " Đảm bảo tính đầy đủ và mềm dẻo của khái niệm, giúp học sinh vận dụng khái niệm đúng đắn.",
+            " Chỉ tập trung vào việc ghi nhớ khái niệm mà không cần phân tích sâu."
         ],
         answer: 2 // 29C
     },
     {
         id: 340,
-        question: "Câu 30. Trong quá trình dạy học, giáo viên cần thực hiện nhiệm vụ nào sau đây để đảm bảo học sinh lĩnh hội mục đích học tập?",
+        question: " Trong quá trình dạy học, giáo viên cần thực hiện nhiệm vụ nào sau đây để đảm bảo học sinh lĩnh hội mục đích học tập?",
         options: [
-            "A. Đảm bảo học sinh không gặp khó khăn khi thực hiện bài tập.",
-            "B. Hướng dẫn học sinh tích cực tham gia vào các nhiệm vụ học tập, giúp hình thành khái niệm và kỹ năng.",
-            "C. Đưa ra các bài kiểm tra khó để học sinh thử thách bản thân.",
-            "D. Phát triển các bài học mang tính lý thuyết cao, ít liên quan đến thực tế."
+            " Đảm bảo học sinh không gặp khó khăn khi thực hiện bài tập.",
+            " Hướng dẫn học sinh tích cực tham gia vào các nhiệm vụ học tập, giúp hình thành khái niệm và kỹ năng.",
+            " Đưa ra các bài kiểm tra khó để học sinh thử thách bản thân.",
+            " Phát triển các bài học mang tính lý thuyết cao, ít liên quan đến thực tế."
         ],
         answer: 1 // 30B
     },
     {
         id: 341,
-        question: "Câu 31. Khi nào nhu cầu đạo đức trở thành động cơ đạo đức?",
+        question: " Khi nào nhu cầu đạo đức trở thành động cơ đạo đức?",
         options: [
-            "A. Khi nó được thể hiện trong hành vi đạo đức cụ thể.",
-            "B. Khi gặp đối tượng có thể thỏa mãn nó trong một tình huống cụ thể.",
-            "C. Khi nó được nhận thức rõ ràng trong tâm trí chủ thể.",
-            "D. Khi nó bị ức chế bởi các yếu tố bên ngoài."
+            " Khi nó được thể hiện trong hành vi đạo đức cụ thể.",
+            " Khi gặp đối tượng có thể thỏa mãn nó trong một tình huống cụ thể.",
+            " Khi nó được nhận thức rõ ràng trong tâm trí chủ thể.",
+            " Khi nó bị ức chế bởi các yếu tố bên ngoài."
         ],
         answer: 1 // 31B
     },
     {
         id: 342,
-        question: "Câu 32: Yếu tố xoá đi khoảng cách giữa ý thức đạo đức với hành vi đạo đức, làm ý thức đạo đức thống nhất với hành vi đạo đức là:",
+        question: " Yếu tố xoá đi khoảng cách giữa ý thức đạo đức với hành vi đạo đức, làm ý thức đạo đức thống nhất với hành vi đạo đức là:",
         options: [
-            "A. Niềm tin đạo đức.",
-            "B. Tình cảm đạo đức.",
-            "C. Thói quen đạo đức.",
-            "D. Thiện chí"
+            " Niềm tin đạo đức.",
+            " Tình cảm đạo đức.",
+            " Thói quen đạo đức.",
+            " Thiện chí"
         ],
         answer: 2 // 32C
     },
@@ -3765,93 +3765,93 @@ const questions = [
         id: 343,
         question: "Câu 33. Cách hiểu nào không đúng về động cơ đạo đức trong các động cơ sau?",
         options: [
-            "A. Động cơ đạo đức thể hiện giá trị của hành vi đạo đức.",
-            "B. Động cơ đạo đức là động cơ có ý nghĩa về đạo đức.",
-            "C. Động cơ thể hiện sức mạnh của hành vi đạo đức.",
-            "D. Động cơ có thể mâu thuẫn với mục đích trực tiếp của hành động cụ thể."
+            " Động cơ đạo đức thể hiện giá trị của hành vi đạo đức.",
+            " Động cơ đạo đức là động cơ có ý nghĩa về đạo đức.",
+            " Động cơ thể hiện sức mạnh của hành vi đạo đức.",
+            " Động cơ có thể mâu thuẫn với mục đích trực tiếp của hành động cụ thể."
         ],
         answer: 3 // 33D
     },
     {
         id: 344,
-        question: "Câu 34. Các tiêu chí để đánh giá một hành vi đạo đức là:",
+        question: " Các tiêu chí để đánh giá một hành vi đạo đức là:",
         options: [
-            "A. Tính không vụ lợi, tính có ích của hành vi, tính tự giác của hành vi.",
-            "B. Tính lợi ích, tính tự giác, tính không vụ lợi.",
-            "C. Tính có ích của đạo đức, tính tự chủ của đạo đức, tính tôn trọng.",
-            "D. Tính tự giác của hành vi, tính tự chủ của hành vi, tính không vụ lợi."
+            " Tính không vụ lợi, tính có ích của hành vi, tính tự giác của hành vi.",
+            " Tính lợi ích, tính tự giác, tính không vụ lợi.",
+            " Tính có ích của đạo đức, tính tự chủ của đạo đức, tính tôn trọng.",
+            " Tính tự giác của hành vi, tính tự chủ của hành vi, tính không vụ lợi."
         ],
         answer: 0 // 34A
     },
     {
         id: 345,
-        question: "Câu 35. Tình cảm đạo đức có thể được biểu hiện ở dạng nào dưới đây?",
+        question: " Tình cảm đạo đức có thể được biểu hiện ở dạng nào dưới đây?",
         options: [
-            "A. Tình cảm đối với nghĩa vụ và trách nhiệm.",
-            "B. Tình cảm yêu thích công việc.",
-            "C. Tình cảm thể thao.",
-            "D. Tình cảm nghệ thuật."
+            " Tình cảm đối với nghĩa vụ và trách nhiệm.",
+            " Tình cảm yêu thích công việc.",
+            " Tình cảm thể thao.",
+            " Tình cảm nghệ thuật."
         ],
         answer: 0 // 35A
     },
     {
         id: 346,
-        question: "Câu 36. Hành vi đạo đức là:",
+        question: " Hành vi đạo đức là:",
         options: [
-            "a. Hành vi được thúc đẩy bởi động cơ có ý nghĩa về mặt đạo đức do cá nhân tự giác làm.",
-            "b. Một hành vi có ích cho xã hội và cho cá nhân, không vi phạm các chuẩn mực đạo đức.",
-            "c. Một hành vi do cá nhân tự nguyện thực hiện.",
-            "d. Cả a, b, c"
+            " Hành vi được thúc đẩy bởi động cơ có ý nghĩa về mặt đạo đức do cá nhân tự giác làm.",
+            " Một hành vi có ích cho xã hội và cho cá nhân, không vi phạm các chuẩn mực đạo đức.",
+            " Một hành vi do cá nhân tự nguyện thực hiện.",
+            " Cả a, b, c"
         ],
         answer: 3 // 36D
     },
     {
         id: 347,
-        question: "Câu  37. Tính tự giác của hành vi đạo đức được thể hiện ở:",
+        question: " Tính tự giác của hành vi đạo đức được thể hiện ở:",
         options: [
-            "a. Tính tích cực của chủ thể hành động.",
-            "b. Ý thức được kết quả hành động và tự nguyện thực hiện.",
-            "c. Tính tự nguyện của chủ thể hành động.",
-            "d. Ý thức được mục đích và ý nghĩa hành động."
+            " Tính tích cực của chủ thể hành động.",
+            " Ý thức được kết quả hành động và tự nguyện thực hiện.",
+            " Tính tự nguyện của chủ thể hành động.",
+            " Ý thức được mục đích và ý nghĩa hành động."
         ],
         answer: 1 // 37B
     },
     {
         id: 348,
-        question: "Câu 38. Hình thành cho học sinh khả năng biết giải quyết tranh chấp một cách hòa bình thuộc nhóm giá trị nào trong các nhóm giá trị sau?",
+        question: " Hình thành cho học sinh khả năng biết giải quyết tranh chấp một cách hòa bình thuộc nhóm giá trị nào trong các nhóm giá trị sau?",
         options: [
             "Bản thân.",
-            "B. Các mối quan hệ.",
-            "C. Xã hội.",
-            "D. Môi trường."
+            " Các mối quan hệ.",
+            " Xã hội.",
+            " Môi trường."
         ],
         answer: 1 // 38B
     },
     {
         id: 349,
-        question: "Câu 39. Đâu không phải là giá trị của bản thân?",
+        question: " Đâu không phải là giá trị của bản thân?",
         options: [
             "Trách nhiệm.",
-            "B. Ngại ngùng",
-            "C. Nhân ái.",
-            "D. Trung thực ."
+            " Ngại ngùng",
+            " Nhân ái.",
+            " Trung thực ."
         ],
         answer: 1 // 39B
     },
     {
         id: 350,
-        question: "Câu 40. Giáo dục giá trị trong nhà trường chủ yếu nhằm:",
+        question: " Giáo dục giá trị trong nhà trường chủ yếu nhằm:",
         options: [
-            "A. Giúp học sinh đạt điểm cao trong các kỳ thi.",
-            "B. Hướng dẫn học sinh ứng xử đúng mực với thầy cô.",
-            "C. Hình thành giá trị và định hướng giá trị đúng đắn cho học sinh.",
-            "D. Rèn luyện kỹ năng giao tiếp cho học sinh."
+            " Giúp học sinh đạt điểm cao trong các kỳ thi.",
+            " Hướng dẫn học sinh ứng xử đúng mực với thầy cô.",
+            " Hình thành giá trị và định hướng giá trị đúng đắn cho học sinh.",
+            " Rèn luyện kỹ năng giao tiếp cho học sinh."
         ],
         answer: 2 // 40C
     },
     {
         id: 351,
-        question: "Câu 41. Các khó khăn tâm lí thường gặp ở học sinh bao gồm:",
+        question: "Các khó khăn tâm lí thường gặp ở học sinh bao gồm:",
         options: [
             "Khó khăn từ phía bản thân .",
             "Khó khăn trong mối quan hệ với bạn bè, thầy cô, cha mẹ.",
@@ -3862,29 +3862,29 @@ const questions = [
     },
     {
         id: 352,
-        question: "Câu 42. Những khó khăn tâm lí nghiêm trọng học sinh có thể gặp bao gồm:",
+        question: " Những khó khăn tâm lí nghiêm trọng học sinh có thể gặp bao gồm:",
         options: [
-            "A. Không hoàn thành bài tập về nhà, không nghe lời cha mẹ.",
-            "B. Tăng động, nói nhiều trong lớp, hay hỏi bài.",
-            "C. Rối loạn lo âu, trầm cảm tuổi vị thành niên, nghiện game và internet.",
-            "D. Lười biếng, ham chơi, vô lễ với thầy cô."
+            " Không hoàn thành bài tập về nhà, không nghe lời cha mẹ.",
+            " Tăng động, nói nhiều trong lớp, hay hỏi bài.",
+            " Rối loạn lo âu, trầm cảm tuổi vị thành niên, nghiện game và internet.",
+            " Lười biếng, ham chơi, vô lễ với thầy cô."
         ],
         answer: 2 // 42C
     },
     {
         id: 353,
-        question: "Câu 43. Nguyên tắc đạo đức cơ bản mà giáo viên cần tuân thủ trong công tác hỗ trợ tâm lí là gì?",
+        question: " Nguyên tắc đạo đức cơ bản mà giáo viên cần tuân thủ trong công tác hỗ trợ tâm lí là gì?",
         options: [
-            "A. Cứng rắn, lý trí, công bằng, nghiêm khắc.",
-            "B. Tôn trọng, quan tâm, chấp nhận, chân thành và đồng cảm.",
-            "C. Hướng dẫn, theo dõi, đánh giá, phê bình.",
-            "D. Kiểm tra, giám sát, xử lý, báo cáo."
+            " Cứng rắn, lý trí, công bằng, nghiêm khắc.",
+            " Tôn trọng, quan tâm, chấp nhận, chân thành và đồng cảm.",
+            " Hướng dẫn, theo dõi, đánh giá, phê bình.",
+            " Kiểm tra, giám sát, xử lý, báo cáo."
         ],
         answer: 1 // 43B
     },
     {
         id: 354,
-        question: "Câu 44. Khi học sinh gặp khó khăn tâm lí, nhưng giáo viên không đủ khả năng hỗ trợ hay tư vấn thì giáo viên làm cách nào dưới đây?",
+        question: " Khi học sinh gặp khó khăn tâm lí, nhưng giáo viên không đủ khả năng hỗ trợ hay tư vấn thì giáo viên làm cách nào dưới đây?",
         options: [
             "Trao đổi với cha mẹ để cha mẹ tự thu xếp.",
             "Báo cáo để Ban giám hiệu tư vấn, hỗ trợ cho học sinh.",
@@ -3895,23 +3895,23 @@ const questions = [
     },
     {
         id: 355,
-        question: "Câu 45. Nhận định nào sau đây đúng khi đề cập đến bản chất của hoạt động hỗ trợ tâm lí học đường?",
+        question: " Nhận định nào sau đây đúng khi đề cập đến bản chất của hoạt động hỗ trợ tâm lí học đường?",
         options: [
-            "A. Hoạt động hỗ trợ tâm lí học đường hướng đến việc chăm sóc sức khỏe tâm thần cho các thành viên trong nhà trường.",
-            "B. Hoạt động hỗ trợ tâm lý học đường cung cấp các dịch vụ tham vấn, trị liệu tâm lí cho học sinh trong trường học.",
-            "C. Hoạt động hỗ trợ tâm lí học đường hướng đến việc phát triển tư duy và năng lực của học sinh.",
-            "D. Hoạt động hỗ trợ tâm lí học đường phục vụ cho nhu cầu chăm sóc sức khỏe tinh thần của đội ngũ cán bộ, giáo viên nhà trường."
+            " Hoạt động hỗ trợ tâm lí học đường hướng đến việc chăm sóc sức khỏe tâm thần cho các thành viên trong nhà trường.",
+            " Hoạt động hỗ trợ tâm lý học đường cung cấp các dịch vụ tham vấn, trị liệu tâm lí cho học sinh trong trường học.",
+            " Hoạt động hỗ trợ tâm lí học đường hướng đến việc phát triển tư duy và năng lực của học sinh.",
+            " Hoạt động hỗ trợ tâm lí học đường phục vụ cho nhu cầu chăm sóc sức khỏe tinh thần của đội ngũ cán bộ, giáo viên nhà trường."
         ],
         answer: 0 // 45A
     },
     {
         id: 356,
-        question: "Câu 46. Các nội dung trong hoạt động hỗ trợ tâm lí học đường gồm?",
+        question: " Các nội dung trong hoạt động hỗ trợ tâm lí học đường gồm?",
         options: [
-            "A. Chẩn đoán, đánh giá và tham vấn, trị liệu tâm lí.",
-            "B. Đánh giá tâm lí, dự phòng và phát triển tâm lí, tư vấn, tham vấn và trị liệu tâm lý, hoạt động điều phối.",
-            "C. Đánh giá tâm lí, giáo dục kỹ năng sống, tư vấn hướng nghiệp, trị liệu tâm lí, báo cáo chuyên đề sân cờ các chủ đề tâm lí.",
-            "D. Đánh giá tâm lí, dự phòng và giáo dục kỹ năng sống, tham vấn và trị liệu tâm lý, tổ chức hoạt động trải nghiệm và hướng nghiệp cho học sinh."
+            " Chẩn đoán, đánh giá và tham vấn, trị liệu tâm lí.",
+            " Đánh giá tâm lí, dự phòng và phát triển tâm lí, tư vấn, tham vấn và trị liệu tâm lý, hoạt động điều phối.",
+            " Đánh giá tâm lí, giáo dục kỹ năng sống, tư vấn hướng nghiệp, trị liệu tâm lí, báo cáo chuyên đề sân cờ các chủ đề tâm lí.",
+            " Đánh giá tâm lí, dự phòng và giáo dục kỹ năng sống, tham vấn và trị liệu tâm lý, tổ chức hoạt động trải nghiệm và hướng nghiệp cho học sinh."
         ],
         answer: 1 // 46B
     },
@@ -3920,70 +3920,70 @@ const questions = [
         question: "Câu 47. “Không thúc ép học sinh ra quyết định để giải quyết vấn đề khi học sinh chưa sẵn sàng ” là biểu hiện của nguyên tắc đạo đức nào trong hỗ trợ tâm lí cho học sinh?",
         options: [
             "Không phán xét học sinh.",
-            "B. Tôn trọng học sinh.",
-            "C. Bảo mật.",
-            "D. Đảm bảo trạng thái tinh thần ổn định khi hỗ trợ tâm lí cho học sinh."
+            " Tôn trọng học sinh.",
+            " Bảo mật.",
+            " Đảm bảo trạng thái tinh thần ổn định khi hỗ trợ tâm lí cho học sinh."
         ],
         answer: 1 // 47B
     },
     {
         id: 358,
-        question: "Câu 48. Bạn cảm thấy mệt mỏi, kiệt sức vì thường xuyên phải lắng nghe và hỗ trợ tâm lý cho học sinh, nhưng không ai chia sẻ với bạn. Trong trường hợp này, bạn nên:",
+        question: " Bạn cảm thấy mệt mỏi, kiệt sức vì thường xuyên phải lắng nghe và hỗ trợ tâm lý cho học sinh, nhưng không ai chia sẻ với bạn. Trong trường hợp này, bạn nên:",
         options: [
             "Giấu kín và tiếp tục chịu đựng vì đó là trách nhiệm của giáo viên.",
             "Bỏ mặc học sinh để tự cân bằng lại bản thân.",
-            "C. Chủ động tìm đến sự hỗ trợ từ đồng nghiệp, ban giám hiệu hoặc chuyên viên tâm lý học đường.",
-            "D. Nghỉ dạy một thời gian để tránh tiếp xúc với học sinh."
+            " Chủ động tìm đến sự hỗ trợ từ đồng nghiệp, ban giám hiệu hoặc chuyên viên tâm lý học đường.",
+            " Nghỉ dạy một thời gian để tránh tiếp xúc với học sinh."
         ],
         answer: 2 // 48C
     },
     {
         id: 359,
-        question: "Câu 49: Một học sinh tâm sự với bạn rằng em cảm thấy lạc lõng, không ai trong lớp muốn chơi với em. Là giáo viên, bạn sẽ phản ứng thế nào?",
+        question: " Một học sinh tâm sự với bạn rằng em cảm thấy lạc lõng, không ai trong lớp muốn chơi với em. Là giáo viên, bạn sẽ phản ứng thế nào?",
         options: [
             "Khuyên em nên thay đổi tính cách để được bạn bè chấp nhận.",
-            "B. Tổ chức một buổi sinh hoạt lớp để khơi gợi sự thấu hiểu giữa các bạn và tạo cơ hội gắn kết.",
-            "C. Nói em đừng để tâm vì chuyện này sẽ qua.",
-            "D. Chuyển em sang lớp khác."
+            " Tổ chức một buổi sinh hoạt lớp để khơi gợi sự thấu hiểu giữa các bạn và tạo cơ hội gắn kết.",
+            " Nói em đừng để tâm vì chuyện này sẽ qua.",
+            " Chuyển em sang lớp khác."
         ],
         answer: 1 // 49B
     },
     {
         id: 360,
-        question: "Câu 50.   Vai trò của giáo viên trong công tác tâm lý học đường là gì?",
+        question: "  Vai trò của giáo viên trong công tác tâm lý học đường là gì?",
         options: [
-            "A. Vừa là người hỗ trợ, vừa là người cần được hỗ trợ trong công tác tâm lý học đường.",
-            "B. Là người điều phối và kiêm nhiệm công tác tư vấn tâm lý cho học sinh.",
-            "C. Vừa là người dạy, vừa là bác sĩ thăm khám, hỗ trợ tâm lý cho học sinh.",
-            "D. Là người đảm bảo việc chăm sóc và phát triển toàn diện sức khỏe tâm thần cho học sinh."
+            " Vừa là người hỗ trợ, vừa là người cần được hỗ trợ trong công tác tâm lý học đường.",
+            " Là người điều phối và kiêm nhiệm công tác tư vấn tâm lý cho học sinh.",
+            " Vừa là người dạy, vừa là bác sĩ thăm khám, hỗ trợ tâm lý cho học sinh.",
+            " Là người đảm bảo việc chăm sóc và phát triển toàn diện sức khỏe tâm thần cho học sinh."
         ],
         answer: 0 // 50A
     },
     {
         id: 361,
-        question: "Câu 51. Kĩ năng nào sau đây thuộc nhóm kĩ năng định hướng giao tiếp?",
+        question: "C Kĩ năng nào sau đây thuộc nhóm kĩ năng định hướng giao tiếp?",
         options: [
-            "A. Kĩ năng tạo động lực học tập.",
-            "B. Kĩ năng lắng nghe tích cực.",
-            "C. Kĩ năng đọc trạng thái tâm lí qua nét mặt và lời nói.",
-            "D. Kĩ năng tổ chức hoạt động nhóm."
+            " Kĩ năng tạo động lực học tập.",
+            " Kĩ năng lắng nghe tích cực.",
+            " Kĩ năng đọc trạng thái tâm lí qua nét mặt và lời nói.",
+            " Kĩ năng tổ chức hoạt động nhóm."
         ],
         answer: 2 // 51C
     },
     {
         id: 362,
-        question: "Câu 52. Biểu hiện giáo viên luôn mổ xẻ gay gắt những lỗi sai của học sinh mà không hướng dẫn, hỗ trợ học sinh cải thiện, vi phạm nguyên tắc cụ thể nào trong giao tiếp sư phạm?",
+        question: " Biểu hiện giáo viên luôn mổ xẻ gay gắt những lỗi sai của học sinh mà không hướng dẫn, hỗ trợ học sinh cải thiện, vi phạm nguyên tắc cụ thể nào trong giao tiếp sư phạm?",
         options: [
             "Nguyên tắc tính mẫu mực.",
-            "B. Nguyên tắc tôn trọng nhân cách học sinh.",
-            "C. Nguyên tắc có thiện ý.",
-            "D. Nguyên tắc đồng cảm."
+            " Nguyên tắc tôn trọng nhân cách học sinh.",
+            " Nguyên tắc có thiện ý.",
+            " Nguyên tắc đồng cảm."
         ],
         answer: 2 // 52C
     },
     {
         id: 363,
-        question: "Câu 53.   Đâu là biểu hiện của nguyên tắc tính mẫu mực trong giao tiếp sư phạm của giáo viên?",
+        question: "   Đâu là biểu hiện của nguyên tắc tính mẫu mực trong giao tiếp sư phạm của giáo viên?",
         options: [
             "Biết đặt mình vào vị trí, hoàn cảnh của học sinh để thấu hiểu.",
             "Có sự mẫu mực về thái độ, cử chỉ, hành vi và cách nói năng.",
@@ -3994,18 +3994,18 @@ const questions = [
     },
     {
         id: 364,
-        question: "Câu 54. “Thái độ của giáo viên cần thống nhất, thể hiện phù hợp với các phản ứng hành vi”. Nội dung trên đang đề cập đến biểu hiện nào của tính mẫu mực trong giao tiếp sư phạm của giáo viên?",
+        question: " “Thái độ của giáo viên cần thống nhất, thể hiện phù hợp với các phản ứng hành vi”. Nội dung trên đang đề cập đến biểu hiện nào của tính mẫu mực trong giao tiếp sư phạm của giáo viên?",
         options: [
             "Sự mẫu mực về trang phục.",
-            "B. Sự mẫu mực trong thái độ, cử chỉ hành vi, cách nói năng.",
-            "C. Sự mẫu mực trong cung cách ứng xử với học sinh",
-            "D. Mẫu mực trong việc xử lý tình huống và cách giải quyết vấn đề trong hoạt động nghề nghiệp."
+            " Sự mẫu mực trong thái độ, cử chỉ hành vi, cách nói năng.",
+            " Sự mẫu mực trong cung cách ứng xử với học sinh",
+            " Mẫu mực trong việc xử lý tình huống và cách giải quyết vấn đề trong hoạt động nghề nghiệp."
         ],
         answer: 1 // 54B
     },
     {
         id: 365,
-        question: "Câu 55. Biểu hiện giáo viên cảm thông với những hoàn cảnh riêng tư, những đặc điểm riêng và cả những yếu tố thuộc về cá tính của học sinh thuộc nguyên tắc cụ thể nào trong giao tiếp sư phạm?",
+        question: " Biểu hiện giáo viên cảm thông với những hoàn cảnh riêng tư, những đặc điểm riêng và cả những yếu tố thuộc về cá tính của học sinh thuộc nguyên tắc cụ thể nào trong giao tiếp sư phạm?",
         options: [
             "Nguyên tắc tính mẫu mực.",
             "Nguyên tắc tôn trọng nhân cách học sinh.",
@@ -4016,56 +4016,56 @@ const questions = [
     },
     {
         id: 366,
-        question: "Câu 56: “Luôn chuẩn bị bài giảng chu đáo, đặt quyền lợi của học sinh lên hàng đầu” là biểu hiện của:",
+        question: " “Luôn chuẩn bị bài giảng chu đáo, đặt quyền lợi của học sinh lên hàng đầu” là biểu hiện của:",
         options: [
-            "A. Tính mô phạm.",
-            "B. Thiện ý trong giao tiếp.",
-            "C. Tôn trọng học sinh.",
-            "D. Đồng cảm với học sinh."
+            "Tính mô phạm.",
+            "Thiện ý trong giao tiếp.",
+            "Tôn trọng học sinh.",
+            "Đồng cảm với học sinh."
         ],
         answer: 1 // 56B
     },
     {
         id: 367,
-        question: "Câu 57:  “Đặt mình vào vị trí của học sinh để thấu hiểu các em” là biểu hiện của nguyên tắc giao tiếp sư phạm nào?",
+        question: "  “Đặt mình vào vị trí của học sinh để thấu hiểu các em” là biểu hiện của nguyên tắc giao tiếp sư phạm nào?",
         options: [
-            "A. Tôn trọng.",
-            "B. Thiện ý.",
-            "C. Mô phạm.",
-            "D. Đồng cảm."
+            " Tôn trọng.",
+            " Thiện ý.",
+            " Mô phạm.",
+            " Đồng cảm."
         ],
         answer: 3 // 57D
     },
     {
         id: 368,
-        question: "Câu 58.  Trong thực tế dạy học, việc lựa chọn phong cách giao tiếp nên được thực hiện như thế nào?",
+        question: " Trong thực tế dạy học, việc lựa chọn phong cách giao tiếp nên được thực hiện như thế nào?",
         options: [
-            "A. Nên dùng phong cách dân chủ trong mọi tình huống.",
-            "B. Luôn sử dụng phong cách độc đoán để đảm bảo kỷ luật.",
-            "C. Vận dụng linh hoạt các phong cách tùy theo hoàn cảnh, mục đích giao tiếp cụ thể.",
-            "D. Duy trì lớp thoải mái, học sinh tự do ngôn luận."
+            " Nên dùng phong cách dân chủ trong mọi tình huống.",
+            " Luôn sử dụng phong cách độc đoán để đảm bảo kỷ luật.",
+            " Vận dụng linh hoạt các phong cách tùy theo hoàn cảnh, mục đích giao tiếp cụ thể.",
+            " Duy trì lớp thoải mái, học sinh tự do ngôn luận."
         ],
         answer: 2 // 58C
     },
     {
         id: 369,
-        question: "Câu 59. Một số học sinh cảm thấy giáo viên \"dễ quá\", không nghiêm túc, từ đó thiếu tôn trọng khi giao tiếp. Để cải thiện, bạn nên:",
+        question: " Một số học sinh cảm thấy giáo viên \"dễ quá\", không nghiêm túc, từ đó thiếu tôn trọng khi giao tiếp. Để cải thiện, bạn nên:",
         options: [
-            "A. Thay đổi ngay sang phong cách độc đoán để lấy lại uy quyền.",
-            "B. Bỏ qua vì học sinh sẽ tự điều chỉnh.",
-            "C. Kết hợp thêm yếu tố nghiêm túc, thống nhất nguyên tắc rõ ràng trong các tình huống.D.",
+            " Thay đổi ngay sang phong cách độc đoán để lấy lại uy quyền.",
+            " Bỏ qua vì học sinh sẽ tự điều chỉnh.",
+            " Kết hợp thêm yếu tố nghiêm túc, thống nhất nguyên tắc rõ ràng trong các tình huống.D.",
             "Cố gắng thân thiết hơn để học sinh không xa cách."
         ],
         answer: 2 // 59C
     },
     {
         id: 370,
-        question: "Câu 60. Khi phát hiện học sinh THPT của mình đang có quan hệ “tình yêu tuổi học trò”, giáo viên nên làm gì cho phù hợp?",
+        question: " Khi phát hiện học sinh THPT của mình đang có quan hệ “tình yêu tuổi học trò”, giáo viên nên làm gì cho phù hợp?",
         options: [
-            "A. Cấm cản, giáo dục tư tưởng cho học sinh việc quan trọng nhất của tuổi này là học để thi đậu đại học.",
-            "B. Tôn trọng, lắng nghe, giáo dục giá trị tình yêu và kỹ năng thể hiện tình cảm phù hợp để học sinh biết cách ứng xử đúng đắn trong tình yêu tuổi học trò.",
-            "C. Tôn trọng, kiên quyết với quan điểm “học tập trước, yêu đương sau” và định hướng cho học sinh xử lý, kết thúc chuyện tình cảm “không có kết quả” đó.",
-            "D. Tiếp cận với các học sinh đang yêu để khuyên nhủ, động viên các em không nên tiếp tục mối quan hệ yêu đương vì sẽ ảnh hưởng rất lớn đến tâm lý và việc học."
+            " Cấm cản, giáo dục tư tưởng cho học sinh việc quan trọng nhất của tuổi này là học để thi đậu đại học.",
+            " Tôn trọng, lắng nghe, giáo dục giá trị tình yêu và kỹ năng thể hiện tình cảm phù hợp để học sinh biết cách ứng xử đúng đắn trong tình yêu tuổi học trò.",
+            " Tôn trọng, kiên quyết với quan điểm “học tập trước, yêu đương sau” và định hướng cho học sinh xử lý, kết thúc chuyện tình cảm “không có kết quả” đó.",
+            " Tiếp cận với các học sinh đang yêu để khuyên nhủ, động viên các em không nên tiếp tục mối quan hệ yêu đương vì sẽ ảnh hưởng rất lớn đến tâm lý và việc học."
         ],
         answer: 1 // 60B
     },
