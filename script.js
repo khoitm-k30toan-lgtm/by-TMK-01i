@@ -3917,7 +3917,7 @@ const questions = [
     },
     {
         id: 357,
-        question: "Câu 47. “Không thúc ép học sinh ra quyết định để giải quyết vấn đề khi học sinh chưa sẵn sàng ” là biểu hiện của nguyên tắc đạo đức nào trong hỗ trợ tâm lí cho học sinh?",
+        question: " “Không thúc ép học sinh ra quyết định để giải quyết vấn đề khi học sinh chưa sẵn sàng ” là biểu hiện của nguyên tắc đạo đức nào trong hỗ trợ tâm lí cho học sinh?",
         options: [
             "Không phán xét học sinh.",
             " Tôn trọng học sinh.",
