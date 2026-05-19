@@ -1513,7 +1513,7 @@ const questions = [
             "Di truyền",
             "Môi trường gia đình và xã hội",
             "Giáo dục",
-            "Cả a và b"
+            "Cả di truyền, môi trường gia đình và xã hội"
         ],
         answer: 2 // c
     },
