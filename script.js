@@ -4069,7 +4069,7 @@ const questions = [
         ],
         answer: 1 // 60B
     },
-]
+];
 const essayQuestions = [
     "Tình huống 1: Trong giờ Toán, thầy Hùng phát hiện An đang nói chuyện riêng. Dù đã được nhắc nhở nhẹ nhàng lần một, An vẫn tiếp tục quay xuống bàn dưới tán gẫu. Mất bình tĩnh, thầy Hùng quát lớn: \"Cậu ra ngay khỏi lớp cho tôi!\" và kiên quyết đuổi An ra ngoài. Câu hỏi: Thầy Hùng đã vi phạm NGHIÊM TRỌNG NHẤT nguyên tắc gì trong giao tiếp sư phạm? Nếu là thầy Hùng, anh/chị sẽ xử lý tình huống này thế nào?",
     "Tình huống 2:  Giờ Hóa học, cô Mai gọi Bình lên bảng giải bài tập cũ. Dù cô đã gợi ý nhiều lần, Bình vẫn lúng túng không làm được. Quá thất vọng, cô Mai gõ thước xuống bàn và nói trước lớp: \"Có bài dễ thế này mà cũng không hiểu, đúng thật là nước đổ đầu vịt\". Lời nói của cô Mai vi phạm nguyên tắc giao tiếp sư phạm nào? Anh/chị hãy đưa ra cách giải quyết sư phạm phù hợp với nguyên tắc giao tiếp sư phạm.",
