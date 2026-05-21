@@ -2714,7 +2714,7 @@ const questions = [
             "Thiện ý",
             "Đồng cảm"
         ],
-        answer: 1
+        answer: 0
     },
     {
         id: 248,
