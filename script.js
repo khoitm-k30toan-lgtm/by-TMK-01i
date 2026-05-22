@@ -698,8 +698,8 @@ const questions = [
         options: [
             "Nhìn thẳng về phía học sinh đang phát biểu",
             "Bĩu môi",
-            "Thở ra",
-            "Cả b và c"
+            "Thở dài",
+            "Cả bĩu môi và thở dài"
         ],
         answer: 3 // d
     },
