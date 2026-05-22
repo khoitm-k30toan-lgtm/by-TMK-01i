@@ -1799,10 +1799,9 @@ const questions = [
             "Hôm nay, Hải làm được một việc tốt và được nhà trường tuyên dương: em đã giúp được một cụ già bị ngất vào trạm xá gần trường.",
             "Em rất vui khi nghĩ đến phần thưởng của bố vì bố đã hứa:”Nếu con làm được một việc tốt thì bố sẽ có phần thưởng”.",
             "Hương rất chăm chỉ học hành, nhưng do chưa có phương pháp tốt nên kết quả học tập của em năm nào cũng thấp",
-            "Nhìn thấy cụ già chuẩn bị qua đường giữa dòng xe tấp nập, Hồng vội vàng chạy tới nói:”Ông ơi, ông để cháu dắt ông qua đường”",
-            "Mai đăng ký tham gia phát quà thiện nguyện vì địa điểm đến là nơi Mai ước ao được đi"
+            "Nhìn thấy cụ già chuẩn bị qua đường giữa dòng xe tấp nập, Hồng vội vàng chạy tới nói:”Ông ơi, ông để cháu dắt ông qua đường”"
         ],
-        answer: 2 // c
+        answer: 3 // c
     },
     {
         id: 165,
